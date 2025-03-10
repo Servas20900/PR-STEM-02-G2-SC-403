@@ -2,11 +2,35 @@
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns="http://www.w3.org/199/xhtml">
     <head th:replace="~{layout/plantilla :: head}">
+        <link th:href="@{/css/indexStyles.css}" rel="stylesheet"/> 
         <title>EBENEZER</title>
     </head>
     <body>
          <header th:replace="~{layout/plantilla :: header}"/>
          
+         <section class="hero position-relative text-white text-center">
+                <img src="/img/landing.png" class="img-fluid w-100" alt="Gym Ebenezer">
+                <div class="overlay position-absolute top-50 start-50 translate-middle">
+                    <h1 class="fw-bold">EBENEZER</h1>
+                    <p class="fs-4">El mejor gimnasio de Cartago.</p>
+                    <a href="#" class="btn btn-primary">Ver promociones</a>
+                </div>
+            </section>
+            
+            <section class="servicios bg-dark text-white text-center py-5">
+                <div class="container">
+                    <h2 class="fw-bold">Nuestros Servicios</h2>
+                    <hr class="mx-auto mb-4" style="width: 50px; height: 3px; background-color: white; border: none;">
+                    <p class="fs-5">En Ebenezer Gym, ofrecemos una amplia variedad de servicios diseñados para ayudarte a alcanzar tus objetivos de acondicionamiento físico:</p>
+                    <ul class="list-unstyled fs-5">
+                        <li><strong>Entrenamiento Personalizado</strong> - Programas diseñados para tu nivel y metas.</li>
+                        <li><strong>Clases Grupales</strong> - Desde CrossFit hasta yoga, encuentra la clase ideal para ti.</li>
+                        <li><strong>Nutrición y Suplementación</strong> - Consejos de expertos para mejorar tu alimentación.</li>
+                    </ul>
+                </div>
+            </section>   
+        
+        
          <footer th:replace="~{layout/plantilla :: footer}"/>
     </body>
 </html>
