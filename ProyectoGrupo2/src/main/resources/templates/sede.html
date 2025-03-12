@@ -1,33 +1,37 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      xmlns="http://www.w3.org/199/xhtml">
-<head th:replace="~{layout/plantilla :: head}">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/199/xhtml">
+  <head th:replace="~{layout/plantilla :: head}">
     <title>EBENEZER</title>
-</head>
-<body>
-    <header th:replace="~{layout/plantilla :: header}"/>
-    
+  </head>
+  <body>
+    <header th:replace="~{layout/plantilla :: header}" />
+
     <section class="hero">
-        <img src="/img/landing.png" class="hero-img" alt="Gym Ebenezer">
-        <div class="hero-overlay">
-            <h1>EBENEZER</h1>
-            <p>El mejor gimnasio de Cartago.</p>
-        </div>
+      <img src="/img/landing.png" class="hero-img" alt="Gym Ebenezer" />
+      <div class="hero-overlay">
+        <h1>EBENEZER</h1>
+        <p>El mejor gimnasio de Cartago.</p>
+      </div>
     </section>
-    
+
     <div class="sede-container">
-        <h2>Sede</h2>
-        <div class="sede-content">
-            <div class="sede-img">
-                <img src="/img/sedeCartago.png" alt="Sede Cartago">
-            </div>
-            <div class="sede-info">
-                <p>Nos ubicamos en el corazón de Cartago. Ven a conocer nuestras instalaciones!</p>
-                <p class="sede-direccion">100m sur del Colegio Miravalles, 100m oeste.</p>
-            </div>
+      <h2>Sede</h2>
+      <div class="sede-content">
+        <div class="sede-img">
+          <img src="/img/sedeCartago.png" alt="Sede Cartago" />
         </div>
+        <div class="sede-info">
+          <p>
+            Nos ubicamos en el corazón de Cartago. Ven a conocer nuestras
+            instalaciones!
+          </p>
+          <p class="sede-direccion">
+            100m sur del Colegio Miravalles, 100m oeste.
+          </p>
+        </div>
+      </div>
     </div>
-    
-    <footer th:replace="~{layout/plantilla :: footer}"/>
-</body>
+
+    <footer th:replace="~{layout/plantilla :: footer}" />
+  </body>
 </html>

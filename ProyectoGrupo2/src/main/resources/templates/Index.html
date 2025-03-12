@@ -1,64 +1,77 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      xmlns="http://www.w3.org/199/xhtml">
-    <head th:replace="~{layout/plantilla :: head}">
-        <link th:href="@{/css/styles.css}" rel="stylesheet"/> 
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/199/xhtml">
+  <head th:replace="~{layout/plantilla :: head}">
+    <link th:href="@{/css/styles.css}" rel="stylesheet" />
 
-        <title>EBENEZER</title>
-    </head>
-    <body>
-        <header th:replace="~{layout/plantilla :: header}"/>
+    <title>EBENEZER</title>
+  </head>
+  <body>
+    <header th:replace="~{layout/plantilla :: header}" />
 
-        <section class="landing">
-            <div class="landing-content container">
-                <span class="logo-font landing-header">EBENEZER</span>
-                <p>El mejor gimnasio de Cartago, donde vas a poder conseguir tus objetivos.</p>
-                <a th:href="@{/promociones}" class="btn primary-btn">Ver promociones</a>
-            </div>
-        </section>
+    <section class="landing">
+      <div class="landing-content container">
+        <span class="logo-font landing-header">EBENEZER</span>
+        <p>
+          El mejor gimnasio de Cartago, donde vas a poder conseguir tus
+          objetivos.
+        </p>
+        <a th:href="@{/promociones}" class="btn primary-btn">Ver promociones</a>
+      </div>
+    </section>
 
-        <main class="container">
-            <h2 class="text-center">Nuestros servicios</h2>
-            <p class="text-center">En Ebenezer Gym, ofrecemos una amplia variedad de servicios diseñados para ayudarte a alcanzar tus objetivos de acondicionamiento físico</p>
+    <main class="container">
+      <h2 class="text-center">Nuestros servicios</h2>
+      <p class="text-center">
+        En Ebenezer Gym, ofrecemos una amplia variedad de servicios diseñados
+        para ayudarte a alcanzar tus objetivos de acondicionamiento físico
+      </p>
 
-            <section class="servicios">
-                <div class="servicios-servicio">
-                    <div class="servicios-servicio--img">
-                        <img th:src="@{/img/entrenamiento-personalizado.jpg}" alt="servicio entrenamiento personalizado"/>
-                    </div>
-                    <div class="servicios-servicio--content">
-                        <h3>Entrenamiento Personalizado</h3>
-                        <p>Programas diseñados para tu nivel y metas</p>
-                    </div>
-                </div>
+      <section class="servicios">
+        <div class="servicios-servicio">
+          <div class="servicios-servicio--img">
+            <img
+              th:src="@{/img/entrenamiento-personalizado.jpg}"
+              alt="servicio entrenamiento personalizado"
+            />
+          </div>
+          <div class="servicios-servicio--content">
+            <h3>Entrenamiento Personalizado</h3>
+            <p>Programas diseñados para tu nivel y metas</p>
+          </div>
+        </div>
 
-                <div class="servicios-servicio">
-                    <div class="servicios-servicio--img">
-                        <img th:src="@{/img/clases-grupales.jpg}" alt="servicio entrenamiento personalizado"/>
-                    </div>
-                    <div class="servicios-servicio--content">
-                        <h3>Clases Grupales</h3>
-                        <p class="text-center">Desde CrossFit hasta yoga, encuentra la clase ideal para ti</p>
-                    </div>
-                </div>
+        <div class="servicios-servicio">
+          <div class="servicios-servicio--img">
+            <img
+              th:src="@{/img/clases-grupales.jpg}"
+              alt="servicio entrenamiento personalizado"
+            />
+          </div>
+          <div class="servicios-servicio--content">
+            <h3>Clases Grupales</h3>
+            <p class="text-center">
+              Desde CrossFit hasta yoga, encuentra la clase ideal para ti
+            </p>
+          </div>
+        </div>
 
-                <div class="servicios-servicio">
-                    <div class="servicios-servicio--img">
-                        <img th:src="@{/img/nutri-suple.jpg}" alt="servicio entrenamiento personalizado"/>
-                    </div>
-                    <div class="servicios-servicio--content">
-                        <h3>Nutrición y Suplementación</h3>
-                        <p class="text-center">Consejos de expertos para mejorar tu alimentación</p>
-                    </div>
-                </div>
-            </section>
+        <div class="servicios-servicio">
+          <div class="servicios-servicio--img">
+            <img
+              th:src="@{/img/nutri-suple.jpg}"
+              alt="servicio entrenamiento personalizado"
+            />
+          </div>
+          <div class="servicios-servicio--content">
+            <h3>Nutrición y Suplementación</h3>
+            <p class="text-center">
+              Consejos de expertos para mejorar tu alimentación
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
 
-        </main>
-
-
-
-
-        <footer th:replace="~{layout/plantilla :: footer}"/>
-    </body>
+    <footer th:replace="~{layout/plantilla :: footer}" />
+  </body>
 </html>
-
