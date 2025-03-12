@@ -33,10 +33,8 @@ public class NavegationController {
        return "home"; // Esto buscará vista.html en templates/
    }
    
-   @GetMapping("/perfil") // Nueva ruta para vista.html
-   public String mostrarPerfil() {
-       return "perfil"; // Esto buscará vista.html en templates/
-   }
+
+
 
 
 
