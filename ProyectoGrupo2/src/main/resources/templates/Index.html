@@ -10,7 +10,7 @@
         <header th:replace="~{layout/plantilla :: header}"/>
 
         <section class="landing">
-            <div class="content container">
+            <div class="landing-content container">
                 <span class="logo-font landing-header">EBENEZER</span>
                 <p>El mejor gimnasio de Cartago, donde vas a poder conseguir tus objetivos.</p>
                 <a th:href="@{/promociones}" class="btn primary-btn">Ver promociones</a>
@@ -18,39 +18,39 @@
         </section>
 
         <main class="container">
-            <h2 class="text-center">Descubrí nuestros planes</h2>
-            <p class="text-center">Tenemos 2 distintos planes que se adaptan a cada persona. Elegí lo que más se adapte a vos!</p>
+            <h2 class="text-center">Nuestros servicios</h2>
+            <p class="text-center">En Ebenezer Gym, ofrecemos una amplia variedad de servicios diseñados para ayudarte a alcanzar tus objetivos de acondicionamiento físico</p>
 
-            <section class="planes">
+            <section class="servicios">
+                <div class="servicios-servicio">
+                    <div class="servicios-servicio--img">
+                        <img th:src="@{/img/entrenamiento-personalizado.jpg}" alt="servicio entrenamiento personalizado"/>
+                    </div>
+                    <div class="servicios-servicio--content">
+                        <h3>Entrenamiento Personalizado</h3>
+                        <p>Programas diseñados para tu nivel y metas</p>
+                    </div>
+                </div>
 
+                <div class="servicios-servicio">
+                    <div class="servicios-servicio--img">
+                        <img th:src="@{/img/clases-grupales.jpg}" alt="servicio entrenamiento personalizado"/>
+                    </div>
+                    <div class="servicios-servicio--content">
+                        <h3>Clases Grupales</h3>
+                        <p class="text-center">Desde CrossFit hasta yoga, encuentra la clase ideal para ti</p>
+                    </div>
+                </div>
 
-                <article class="plan-card plan-card--premium">
-                    <div class="plan-card--heading">
-                        <h3>Premium</h3>
+                <div class="servicios-servicio">
+                    <div class="servicios-servicio--img">
+                        <img th:src="@{/img/nutri-suple.jpg}" alt="servicio entrenamiento personalizado"/>
                     </div>
-                    <div class="plan-card--content">
-                        <p>Rutina</p>
-                        <p>Medidas mensuales</p>
-                        <p>Instructor grupal</p>
+                    <div class="servicios-servicio--content">
+                        <h3>Nutrición y Suplementación</h3>
+                        <p class="text-center">Consejos de expertos para mejorar tu alimentación</p>
                     </div>
-                    <div class="plan-card--btns">
-                        <a class="btn primary-btn">Ver detalles</a>
-                    </div>
-                </article>
-
-                <article class="plan-card">
-                    <div class="plan-card--heading">
-                        <h3>Básico</h3>
-                    </div>
-                    <div class="plan-card--content">
-                        <p>Rutina</p>
-                        <p>Medidas mensuales</p>
-                        <p>Instructor grupal</p>
-                    </div>
-                    <div class="plan-card--btns">
-                        <a class="btn secondary-btn">Ver detalles</a>
-                    </div>
-                </article>
+                </div>
             </section>
 
         </main>
