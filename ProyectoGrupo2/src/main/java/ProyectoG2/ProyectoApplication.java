@@ -1,4 +1,4 @@
-package ProyectoG2.Proyecto;
+package ProyectoG2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ProyectoApplication {
 
 	public static void main(String[] args) {
+		
 		SpringApplication.run(ProyectoApplication.class, args);
 	}
 
