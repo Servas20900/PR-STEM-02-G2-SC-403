@@ -1,53 +1,62 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
-    <head th:fragment="head">
-        <title>EBENEZER</title>
-        <meta charset="UTF-8"/>
-        <link rel="icon" type="image/png" th:href="@{/img/1.png}"/>
-        <link rel="stylesheet" th:href="@{/css/normalize.css}"/>
-        <link rel="stylesheet" th:href="@{/css/style.css}"/>
-        <link th:href="@{/css/sede.css}" rel="stylesheet"/> 
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+  <head th:fragment="head">
+    <title>EBENEZER</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" th:href="@{/img/1.png}" />
+    <link th:href="@{/css/sede.css}" rel="stylesheet" />
+    <link rel="stylesheet" th:href="@{/css/normalize.css}" />
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+    <link th:href="@{/webjars/font-awesome/css/all.css}" rel="stylesheet" />
+  </head>
 
-    </head>
+  <body>
+    <!-- Navbar -->
+    <header th:fragment="header">
+      <nav class="navbar">
+        <div class="navbar-items">
+          <div class="navbar-left-side">
+            <span class="logo-font navbar-logo"
+              ><a th:href="@{/}">EBENEZER</a></span
+            >
+          </div>
+          <div class="navbar-right-side">
+            <ul class="navbar-links">
+              <li><a th:href="@{/promociones}">Promociones</a></li>
+              <li><a th:href="@{/sede}">Sedes</a></li>
+              <li><a th:href="@{/contacto}">Contacto</a></li>
+              <li><a class="btn secondary-btn">Registrarse</a></li>
+              <li><a class="btn primary-btn">Iniciar Sesión</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
 
-    <body>
-        <!-- Navbar -->
-        <header th:fragment="header">
-            <nav class="navbar">
-                <div class="navbar-items">
-                    <div class="navbar-left-side">
-                        <span class="logo-font navbar-logo"><a th:href="@{/}">EBENEZER</a></span>
-                    </div>
-                    <div class="navbar-right-side">
-                        <ul class="navbar-links">
-                            <li><a th:href="@{/promociones}">Promociones</a></li>
-                            <li><a th:href="@{/sede}">Sedes</a></li>
-                            <li><a th:href="@{/contacto}">Contacto</a></li>
-                            <li><a class="btn secondary-btn">Registrarse</a></li>
-                            <li><a class="btn primary-btn">Iniciar Sesión</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
+    <!-- Contenido Principal -->
+    <main class="container mt-5">
+      <h1 class="text-center">Bienvenido a Ebenezer Gym</h1>
+      <p class="text-center">
+        Tu lugar ideal para ponerte en forma y alcanzar tus objetivos.
+      </p>
+    </main>
 
-        <!-- Contenido Principal -->
-        <main class="container mt-5">
-            <h1 class="text-center">Bienvenido a Ebenezer Gym</h1>
-            <p class="text-center">Tu lugar ideal para ponerte en forma y alcanzar tus objetivos.</p>
-        </main>
-
-        <!-- Footer -->
-        <footer>
-            <div class="container text-center">
-                <p>© 2025 Ebenezer Gym. Todos los derechos reservados.</p>
-                <div>
-                    <a href="#" class="text-white mx-2"><i class="fab fa-facebook fa-lg"></i></a>
-                    <a href="#" class="text-white mx-2"><i class="fab fa-instagram fa-lg"></i></a>
-                    <a href="#" class="text-white mx-2"><i class="fab fa-twitter fa-lg"></i></a>
-                </div>
-            </div>
-        </footer>
-    </body>
+    <!-- Footer -->
+    <footer>
+      <div class="container text-center">
+        <p>© 2025 Ebenezer Gym. Todos los derechos reservados.</p>
+        <div>
+          <a href="#" class="text-white mx-2"
+            ><i class="fab fa-facebook fa-lg"></i
+          ></a>
+          <a href="#" class="text-white mx-2"
+            ><i class="fab fa-instagram fa-lg"></i
+          ></a>
+          <a href="#" class="text-white mx-2"
+            ><i class="fab fa-twitter fa-lg"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
