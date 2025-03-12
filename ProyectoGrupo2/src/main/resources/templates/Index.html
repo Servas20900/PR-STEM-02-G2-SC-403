@@ -9,13 +9,12 @@
         <header th:replace="~{layout/plantilla :: header}"/>
 
         <section class="landing">
-            <div class="landing-img">
-                <img src="/img/landing.png" alt="Landing Image"/>
-            </div>
-            <div class="landing-content">
+            <div class="content container">
+                <span class="logo-font landing-header">EBENEZER</span>
+                <p>El mejor gimnasio de Cartago, donde vas a poder conseguir tus objetivos.</p>
+                <a th:href="@{/promociones}" class="btn primary-btn">Ver promociones</a>
             </div>
         </section>
-
 
         <main class="container">
             <h2 class="text-center">Descubrí nuestros planes</h2>
