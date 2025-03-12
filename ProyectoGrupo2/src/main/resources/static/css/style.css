@@ -5,6 +5,7 @@
 body{
     font-family: "Montserrat";
     background-color: #0c2a4b;
+    color: #fff;
 }
 
 h1{
@@ -56,6 +57,11 @@ a{
     font-weight: 600;
 }
 
+main {
+    color:#fff;
+    margin-top:80px;
+}
+
 .primary-btn{
     background-color: #3b98ff;
     color: #fff;
@@ -105,7 +111,7 @@ a{
     color: #000;
 }
 
-
+/* pagina index/home */
 
 .landing {
     position: relative;
@@ -134,15 +140,59 @@ a{
     margin-bottom: 20px;
 }
 
-.content {
+.landing-content {
     position: relative;
     z-index: 2;
 }
 
-main {
-    color:#fff;
-    margin-top:60px;
+.servicios{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
 }
+
+.servicios-servicio{
+    width: 800px;
+    height: 325px;
+    display:grid;
+    grid-template-columns: 60% 40%;
+    justify-items: center;
+    background-color: #fff;
+    border-radius:8px;
+    
+}
+
+.servicios-servicio--img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.servicios-servicio--img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px 0 0 8px;
+}
+
+
+.servicios-servicio--img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.servicios-servicio--content{
+    height: 100%;
+    text-align: center;
+    align-content: center;
+    color:#333;
+    padding:15px;
+}
+
+
+
+/* pagina promociones */
 
 .planes{
     width: 100%;
