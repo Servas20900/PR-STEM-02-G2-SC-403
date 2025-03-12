@@ -7,6 +7,8 @@
         <link rel="icon" type="image/png" th:href="@{/img/1.png}"/>
         <link rel="stylesheet" th:href="@{/css/normalize.css}"/>
         <link rel="stylesheet" th:href="@{/css/style.css}"/>
+        <link th:href="@{/css/sede.css}" rel="stylesheet"/> 
+
     </head>
 
     <body>
@@ -20,8 +22,8 @@
                     <div class="navbar-right-side">
                         <ul class="navbar-links">
                             <li><a th:href="@{/promociones}">Promociones</a></li>
-                            <li><a>Sedes</a></li>
-                            <li><a>Contacto</a></li>
+                            <li><a th:href="@{/sede}">Sedes</a></li>
+                            <li><a th:href="@{/contacto}">Contacto</a></li>
                             <li><a class="btn secondary-btn">Registrarse</a></li>
                             <li><a class="btn primary-btn">Iniciar Sesión</a></li>
                         </ul>
