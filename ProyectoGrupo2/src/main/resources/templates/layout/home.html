@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:fragment="head">
+        <title>EBENEZER</title>
+        <meta charset="UTF-8"/>
+        <link rel="icon" type="image/png" th:href="@{/img/1.png}">
+        <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+        <link th:href="@{/webjars/font-awesome/css/all.css}" rel="stylesheet"/>
+        <link th:href="@{/css/Styles.css}" rel="stylesheet"/>        
+        <script th:src="@{/js/rutinas.js}"></script>
+        <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+        <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+        <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>        
+    </head>
+
+        <body>
+            <!-- Navbar -->
+            <header>
+                <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+                    <div class="container">
+                        <a class="navbar-brand fw-bold" th:href="@{/}">
+                            <span class="logo-text">EBENEZER</span>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" th:href="@{/promociones}">Promociones</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a th:href="@{/sede}" class="btn btn-secondary">Ver Sedes</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" th:href="@{/contacto}">Contacto</a>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link text-primary" th:href="@{/}">Iniciar Sesión</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-primary" th:href="@{/}">Registrarse</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+    
+            <!-- Contenido Principal -->
+            <main class="container mt-5">
+                <h1 class="text-center">Bienvenido a Ebenezer Gym</h1>
+                <p class="text-center">Tu lugar ideal para ponerte en forma y alcanzar tus objetivos.</p>
+            </main>
+    
+            <!-- Footer -->
+            <footer class="footer bg-dark text-white mt-5 py-4">
+                <div class="container text-center">
+                    <p class="mb-2">© 2025 Ebenezer Gym. Todos los derechos reservados.</p>
+                    <div>
+                        <a href="#" class="text-white mx-2"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" class="text-white mx-2"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-white mx-2"><i class="fab fa-twitter fa-lg"></i></a>
+                    </div>
+                </div>
+            </footer>
+    
+            <!-- Bootstrap JS -->
+            <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+            <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+            <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+        </body>
+    </html>
+    

@@ -6,8 +6,13 @@ CREATE TABLE usuarios (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100) NOT NULL,
     email VARCHAR(100) UNIQUE NOT NULL,
-    password VARCHAR(255) NOT NULL
+    fecha_nacimiento DATE NOT NULL,
+    tipo_plan VARCHAR(50) NOT NULL,
+    fecha_expiracion_plan DATE NOT NULL
 );
+INSERT INTO usuarios (nombre, email, fecha_nacimiento, tipo_plan, fecha_expiracion_plan)  
+VALUES ('Carlos Pérez', 'carlos.perez@example.com', '1990-05-15', 'Mensual', '2025-04-10');
+
 
 
 -- Crear usuario y otorgarle permisos
