@@ -37,9 +37,8 @@ public class NavegationController {
    public String mostrarPerfil() {
        return "perfil"; // Esto buscará vista.html en templates/
    }
-
-
-
-
-   
+   @GetMapping("/blog") // Nueva ruta para blogs.html
+    public String mostrarBlogs() {
+        return "blog"; // Buscará blogs.html en templates/
+    }    
 }

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{layout/plantilla :: head}">
+    <title>Blogs - Artículos</title>
+    <style>
+        body {
+            background-color: #0d1b2a;
+            color: white;
+        }
+        .blog-container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        .category {
+            background: #162b4c;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+        .category h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .article {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .article img {
+            width: 120px;
+            height: 80px;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+        .article-content {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <header th:replace="~{layout/plantilla :: header}"/>
+    
+    <main class="blog-container">
+        <h1>Blogs</h1>
+        
+        <div class="category">
+            <h2>Ejercicios</h2>
+            <div class="article">
+                <img src="/img/ejercicios.jpeg" alt="Pesas en el gimnasio">
+                <div class="article-content">
+                    <h3>Mejores ejercicios para bajar de peso rápido</h3>
+                    <p>Descubre una rutina efectiva para quemar grasa y mejorar tu resistencia.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="category">
+            <h2>Dieta y Nutrición</h2>
+            <div class="article">
+                <img src="/img/nutricion.png" alt="Plato saludable">
+                <div class="article-content">
+                    <h3>Prepara un menú semanal saludable</h3>
+                    <p>Disfrutar un menú balanceado es clave para verte y sentirte bien.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer th:replace="~{layout/plantilla :: footer}"/>
+</body>
+</html>
