@@ -1,14 +1,51 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org"
-      xmlns="http://www.w3.org/199/xhtml">
-    <head th:replace="~{layout/plantilla :: head}">
-        <link th:href="@{/css/indexStyles.css}" rel="stylesheet"/> 
-        <title>EBENEZER</title>
-    </head>
-    <body>
-         <header th:replace="~{layout/plantilla :: header}"/>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/199/xhtml">
+  <head th:replace="~{layout/plantilla :: head}">
+    <link th:href="@{/css/indexStyles.css}" rel="stylesheet" />
+    <title>EBENEZER</title>
+  </head>
+  <body>
+    <header th:replace="~{layout/plantilla :: header}" />
 
-            
-         <footer th:replace="~{layout/plantilla :: footer}"/>
-    </body>
+    <main class="container">
+      <h1 class="text-center">Contactanos!</h1>
+      <p class="text-center">
+        Podes encontrarnos en redes sociales y contactarnos!
+      </p>
+      <section class="contacto">
+        <div class="contacto-card contacto-card--instagram">
+          <div class="contacto-card--heading">
+            <i class="contacto-icon-white fa-brands fa-instagram"></i>
+            <h3>Instagram</h3>
+          </div>
+          <div class="contacto-card--content">
+            <p class="text-center">Descubri nuestro dia a dia en Enebenezer.</p>
+          </div>
+          <a class="btn standard-btn-white">Visitar</a>
+        </div>
+        <div class="contacto-card contacto-card--whatsapp">
+          <div class="contacto-card--heading">
+            <i class="contacto-icon-white fa-brands fa-whatsapp"></i>
+            <h3>WhatsApp</h3>
+          </div>
+          <div class="contacto-card--content">
+            <p class="text-center">Ocupas contacto directo?</p>
+          </div>
+          <a class="btn standard-btn-white">Escribinos</a>
+        </div>
+        <div class="contacto-card contacto-card--facebook">
+          <div class="contacto-card--heading">
+            <i class="contacto-icon-white fa-brands fa-facebook"></i>
+            <h3>Facebook</h3>
+          </div>
+          <div class="contacto-card--content">
+            <p class="text-center">Enterate de las ultimas actualizaciones</p>
+          </div>
+          <a class="btn standard-btn-white">Visitar</a>
+        </div>
+      </section>
+    </main>
+
+    <footer th:replace="~{layout/plantilla :: footer}" />
+  </body>
 </html>
