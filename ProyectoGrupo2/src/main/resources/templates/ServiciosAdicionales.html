@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/199/xhtml">
+  <head th:replace="~{layout/plantilla2 :: head}">
+    <title>EBENEZER</title>
+  </head>
+  <body>
+    <header th:replace="~{layout/plantilla2 :: header}" />
+
+
+    <div class="container">
+        <h1>Servicios adicionales</h1>
+
+        <div class="filters">
+            <input type="text" placeholder=" Buscar">
+            <select><option>Marca</option></select>
+            <select><option>Sexo</option></select>
+            <select><option>Talla</option></select>
+            <select><option>Precio</option></select>
+            <select><option>Color</option></select>
+        </div>
+
+        <div class="products">
+            <div class="card">
+                <img th:src="@{/img/nikeRoja.png}" alt="Nike Pegasus3" />
+                <div class="info">
+                    <h3>Nike Pegasus 3</h3>
+                    <p>$55</p>
+                    <button>Ver detalles</button>
+                </div>
+            </div>
+            <div class="card">
+                <img th:src="@{/img/zapatoNegro.png}" alt="Salomon XT5"/>
+                <div class="info">
+                    <h3>Salomon XT5</h3>
+                    <p>$105</p>
+                    <button>Ver detalles</button>
+                </div>
+            </div>
+            <div class="card"> 
+                <img th:src="@{/img/reloj.png}" alt="Garmin Watch"/>
+                <div class="info">
+                    <h3>Garmin Watch</h3>
+                    <p>$55</p>
+                    <button>Ver detalles</button>
+                </div>
+            </div>
+            <br>
+            <div class="card">
+                <img th:src="@{/img/short.png}" alt="short" />
+                <div class="info">
+                    <h3>short</h3>
+                    <p>$25</p>
+                    <button>Ver detalles</button>
+                </div>
+            </div>
+            <div class="card">
+                <img th:src="@{/img/headphones.png}" alt="headphones" />
+                <div class="info">
+                    <h3>headphones</h3>
+                    <p>$555</p>
+                    <button>Ver detalles</button>
+                </div>
+            </div>
+            <div class="card">
+                <img th:src="@{/img/regularShoes.png}" alt="regularShoes.png" />
+                <div class="info">
+                    <h3>regularShoes</h3>
+                    <p>$75</p>
+                    <button>Ver detalles</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer th:replace="~{layout/plantilla2 :: footer}" />
+</body>
+</html>
