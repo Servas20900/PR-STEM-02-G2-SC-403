@@ -40,4 +40,9 @@ public class NavegationController {
     public String mostrarBlogs() {
         return "blog"; // Buscará blogs.html en templates/
     }
+
+    @GetMapping("/ServiciosAdicionales") // Nueva ruta para blogs.html
+    public String mostrarServiciosAdicionales() {
+        return "ServiciosAdicionales"; // Buscará blogs.html en templates/
+    }
 }
