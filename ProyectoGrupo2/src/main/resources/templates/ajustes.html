@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/199/xhtml">
-<head th:replace="~{layout/plantilla :: head}">
+<head th:replace="~{layout/plantilla2 :: head}">
     <title>EBENEZER</title>
 </head>
 <body>
-<header th:replace="~{layout/plantilla :: header}"/>
+<header th:replace="~{layout/plantilla2 :: header}"/>
 
     <div class="contenedor-ajustes">
         <div class="Ajustes">
@@ -21,8 +21,11 @@
             <div class="contenido-ajustes">
                 <div class="encabezado-ajustes">
                     <h2>General</h2>
-                    <button class="boton-ayuda"> Ayuda ?</button>
+                    <div class="boton-ayuda">
+                        <button id="ayudaBtn">Ayuda ?</button>
+                    </div>
                 </div>
+                
                 <div class="opcion-ajuste">
                     <span><strong>Sonido</strong></span>
                     <label class="interruptor">
@@ -37,12 +40,14 @@
                         <span class="deslizador"></span>
                     </label>
                 </div>
+                <br>
+                <br>
                 <p class="politica-ajustes">Política de privacidad y términos de uso <a th:href="@{/}">aquí</a></p>
                 <button class="boton-cerrar-sesion">Cerrar Sesión</button>
             </div>
         </div>
     </div>
 
-<footer th:replace="~{layout/plantilla :: footer}"/>
+<footer th:replace="~{layout/plantilla2 :: footer}"/>
 </body>
 </html>

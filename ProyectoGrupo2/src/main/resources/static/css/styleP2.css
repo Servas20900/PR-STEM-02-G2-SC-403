@@ -2,70 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 body {
-  font-family: "Montserrat";
-  background-color: #0c2a4b;
-  color: #fff;
-}
-
-h1 {
-  font-size: 38px;
-  font-weight: 700;
-}
-
-h2 {
-  font-size: 32px;
-  font-weight: 600;
-}
-
-h3 {
-  font-size: 26px;
-  font-weight: 500;
-}
-
-h4 {
-  font-size: 20px;
-  font-weight: 400;
-}
-
-p {
-  font-size: 16px;
-}
-
-a {
-  text-decoration: none;
-  cursor: pointer;
-  color: #000;
-}
-
-.container {
-  width: 75%;
-  margin: 0 auto;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.logo-font {
-  font-family: "Notable";
-}
-
-.btn {
-  padding: 10px 20px;
-  border-radius: 6px;
-  font-weight: 600;
-}
-
-main {
-  color: #fff;
-  margin-top: 80px;
-}
-
-
-
-.standard-btn-black {
-  background-color: #fff;
-  color: #000;
+    font-family: "Montserrat", sans-serif;
+    background-color: #fff;
+    color: #000;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar {
@@ -73,40 +14,56 @@ main {
     height: 100px;
     padding: 0 60px;
     background-color: #fff;
-    display: flex; 
-    justify-content: space-between; 
-    align-items: center; 
-    box-sizing: border-box;
-  }
-.navbar-logo {
-  font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
 }
 
 .navbar-items {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar-links {
-  display: flex;
-  list-style: none;
-  gap: 65px;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 65px;
+    align-items: center;
 }
 
-.navbar-links li > a {
-  font-weight: 600;
-  transition: all 0.3s ease;
+.navbar-links li {
+    display: flex;
+    align-items: center;
 }
 
-.navbar-links li > a:hover {
-    color: #3b98ff;
-  }
-  
-  .navbar-links li > a:visited {
-    color: #000;
-  }
+.navbar-links a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: #007bff;
+}
+
+.navbar-logo {
+    font-family: "Notable", sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.navbar-links li:nth-child(4) {
+    margin: 0 50px; /* Espacio alrededor del logo */
+}
+
 footer {
   display: flex;
   justify-content: center;
