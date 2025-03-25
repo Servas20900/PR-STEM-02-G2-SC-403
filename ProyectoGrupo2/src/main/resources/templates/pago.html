@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/199/xhtml">
+<head th:replace="~{layout/plantilla2 :: head}">
+    <title>EBENEZER</title>
+</head>
+    <body>
+        <header th:replace="~{layout/plantilla2 :: header}"/>
+
+            <div class="container-pago">
+                <h2>Ingresá un método de pago</h2>
+                <div class="metodo-pago">
+                    <img th:src="@{/img/metodoDePago.png}" alt="tipos">
+                </div>
+                <form>
+                    <input type="text" placeholder="Nombre" required>
+                    <input type="text" placeholder="Número de tarjeta" required>
+                    <input type="text" placeholder="Fecha de vencimiento" required>
+                    <input type="text" placeholder="CCV" required>
+                    <button type="submit" class="btn-pago">Agregar</button>
+                </form>
+                <p class="info-pago">
+                    Puedes usar varias formas de pago con tu cuenta. Obtén detalles<br>
+                    Autorizas a EBENEZER a realizar cobros a esta forma de pago predeterminada para
+                    las transacciones pagadas, y si hay un problema, tus siguientes formas de pago
+                    elegibles. Obtén detalles
+                </p>
+            </div>
+
+        <footer th:replace="~{layout/plantilla2 :: footer}" />
+    </body>
+</html>

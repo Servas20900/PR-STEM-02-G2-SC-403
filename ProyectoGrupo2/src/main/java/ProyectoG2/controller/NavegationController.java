@@ -51,4 +51,8 @@ public class NavegationController {
         return "ajustes"; 
     }
 
+    @GetMapping("/pago") 
+    public String mostrarPago() {
+        return "pago"; 
+    }
 }
