@@ -1,50 +1,58 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="~{layout/plantilla :: head}">
+
+<head th:replace="~{layout/plantilla2 :: head}">
     <title>Blogs - Artículos</title>
     <style>
         body {
             background-color: #0d1b2a;
             color: white;
         }
+
         .blog-container {
             max-width: 900px;
             margin: auto;
             padding: 20px;
         }
+
         .category {
             background: #162b4c;
             padding: 15px;
             margin-bottom: 20px;
             border-radius: 8px;
         }
+
         .category h2 {
             font-size: 1.5rem;
             margin-bottom: 10px;
         }
+
         .article {
             display: flex;
             align-items: center;
             gap: 15px;
             margin-bottom: 15px;
         }
+
         .article img {
             width: 120px;
             height: 80px;
             border-radius: 5px;
             object-fit: cover;
         }
+
         .article-content {
             flex: 1;
         }
     </style>
 </head>
+
 <body>
-    <header th:replace="~{layout/plantilla :: header}"/>
-    
+    <header th:replace="~{layout/plantilla2 :: header}"/>
+
     <main class="blog-container">
         <h1>Blogs</h1>
-        
+
         <div class="category">
             <h2>Ejercicios</h2>
             <div class="article">
@@ -55,7 +63,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="category">
             <h2>Dieta y Nutrición</h2>
             <div class="article">
@@ -67,7 +75,8 @@
             </div>
         </div>
     </main>
-    
-    <footer th:replace="~{layout/plantilla :: footer}"/>
+
+    <footer th:replace="~{layout/plantilla2 :: footer}" />
 </body>
+
 </html>

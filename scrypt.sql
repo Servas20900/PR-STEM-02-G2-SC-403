@@ -12,7 +12,8 @@ CREATE TABLE usuarios (
 );
 
 INSERT INTO usuarios (nombre, email, fecha_nacimiento, tipo_plan, fecha_expiracion_plan)  
-VALUES ('El_señor de la noche', 'batimail@example.com', '1990-05-15', 'Premium', '2025-04-10');
+VALUES ('El_señor_de_la_noche', 'batimail@example.com', '1990-05-15', 'Premium', '2025-04-10');
+VALUES ('BadBunny', 'otranocheenmiami@example.com', '1991-01-05', 'Premium', '2025-03-31');
 
 -- Crear usuario y otorgarle permisos
 CREATE USER 'usuario_proyecto'@'localhost' IDENTIFIED BY 'la_Clave.';
