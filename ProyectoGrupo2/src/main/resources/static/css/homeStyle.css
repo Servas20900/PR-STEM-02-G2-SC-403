@@ -1,27 +1,29 @@
-
-
-.container {
+.contenedor-home { 
     padding: 40px;
+    text-align: center;
 }
 
-h1 {
+h1, h2 {
     font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 h2 {
     font-size: 24px;
-    margin-bottom: 20px;
+    text-decoration: underline;
+
 }
 
-.recommendations {
+.recomendaciones-home {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 20px;
     margin-bottom: 20px;
 }
 
-.card {
+.tarjeta-home {
     position: relative;
     width: 180px;
     height: 180px;
@@ -29,14 +31,14 @@ h2 {
     overflow: hidden;
 }
 
-.card img {
+.tarjeta-home img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
 }
 
-.overlay {
+.superposicion-home {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -52,7 +54,7 @@ h2 {
     padding: 10px;
 }
 
-.separator {
+.separador-home {
     width: 2px;
     height: 150px;
     background-color: rgba(255, 255, 255, 0.5);
