@@ -2,18 +2,51 @@ CREATE DATABASE Proyecto;
 
 -- Usar la base de datos
 USE Proyecto;
-CREATE TABLE usuarios (
-    id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(100) NOT NULL,
-    email VARCHAR(100) UNIQUE NOT NULL,
-    fecha_nacimiento DATE NOT NULL,
-    tipo_plan VARCHAR(50) NOT NULL,
-    fecha_expiracion_plan DATE NOT NULL
+-- Tabla Usuarios
+CREATE TABLE Usuarios (
+    id_usuario INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL,
+    correo VARCHAR(255) UNIQUE NOT NULL,
+    contraseña VARCHAR(255) NOT NULL,
+    fecha_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    rol ENUM('Visitante', 'Miembro', 'Administrador') NOT NULL,
+    telefono VARCHAR(20),
+    direccion TEXT
 );
 
-INSERT INTO usuarios (nombre, email, fecha_nacimiento, tipo_plan, fecha_expiracion_plan)  
-VALUES ('El_señor_de_la_noche', 'batimail@example.com', '1990-05-15', 'Premium', '2025-04-10');
-VALUES ('BadBunny', 'otranocheenmiami@example.com', '1991-01-05', 'Premium', '2025-03-31');
+-- Tabla Promociones
+CREATE TABLE Promociones (
+    id_promocion INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(255) NOT NULL,
+    descripcion TEXT,
+    precio DECIMAL(10, 2) NOT NULL
+);
+
+-- Tabla Clases
+CREATE TABLE Clases (
+    id_clase INT AUTO_INCREMENT PRIMARY KEY,
+    nombre_clase VARCHAR(255) NOT NULL,
+    descripcion TEXT,
+    instructor VARCHAR(255) NOT NULL,
+);
+
+-- Tabla Servicios Adicionales
+CREATE TABLE Servicios_Adicionales (
+    id_articulo INT AUTO_INCREMENT PRIMARY KEY,
+    nombre_articulo VARCHAR(255) NOT NULL,
+    precio DECIMAL(10, 2) NOT NULL,
+    img VARCHAR(255) -- Ruta de la imagen
+);
+
+-- Tabla Blog
+CREATE TABLE Blog (
+    id_articulo_blog INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(255) NOT NULL,
+    img VARCHAR(255), -- Ruta de la imagen
+    contenido TEXT NOT NULL,
+    categoria VARCHAR(255)  NOT NULL
+
+);
 
 -- Crear usuario y otorgarle permisos
 CREATE USER 'usuario_proyecto'@'localhost' IDENTIFIED BY 'la_Clave.';
