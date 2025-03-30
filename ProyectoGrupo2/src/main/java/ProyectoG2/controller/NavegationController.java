@@ -46,13 +46,23 @@ public class NavegationController {
         return "ServiciosAdicionales"; // Buscará blogs.html en templates/
     }
 
-    @GetMapping("/ajustes") 
+    @GetMapping("/ajustes")
     public String mostrarAjustes() {
-        return "ajustes"; 
+        return "ajustes";
     }
 
-    @GetMapping("/pago") 
+    @GetMapping("/pago")
     public String mostrarPago() {
-        return "pago"; 
+        return "pago";
     }
+
+    @GetMapping("/login")
+    public String mostrarLogin() {
+        return "login";
+    };
+
+    @GetMapping("/singup")
+    public String mostrarSingup() {
+        return "singup";
+    };
 }
