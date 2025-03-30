@@ -73,14 +73,14 @@ main {
     color: #005fda;
 }
 
-.standard-btn-white {
+.standard-btn-black {
     background-color: #fff;
     color: #000;
 }
 
 .standard-btn-black {
-    background-color: #fff;
-    color: #000;
+    background-color: #000;
+    color: #fff;
 }
 
 .navbar {
@@ -97,15 +97,26 @@ main {
 
 .navbar-items {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     height: 100%;
 }
 
+.navbar-items-public{
+    justify-content: space-between;
+}
+
+.navbar-items-private{
+    justify-content: center;
+}
+
 .navbar-links {
+    width: 100%;
     display: flex;
     list-style: none;
     gap: 65px;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
 }
 
 .navbar-links li > a {
@@ -272,6 +283,7 @@ main {
 .contacto {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    place-items: center;
     margin-top: 40px;
 }
 
@@ -281,6 +293,7 @@ main {
     width: 250px;
     height: 210px;
     color: #fff;
+    background-color: #000;
     border-radius: 7px;
     padding: 0 10px;
     place-items: center;
@@ -291,7 +304,7 @@ main {
     font-size: 32px;
 }
 
-.contacto-card--instagram {
+.btn-gradient-instagram {
     background: linear-gradient(
             90deg,
             rgba(131, 58, 180, 1) 0%,
@@ -299,7 +312,7 @@ main {
     );
 }
 
-.contacto-card--whatsapp {
+.btn-gradient-whatsapp {
     background: linear-gradient(
             90deg,
             rgba(169, 194, 111, 1) 0%,
@@ -307,7 +320,7 @@ main {
     );
 }
 
-.contacto-card--facebook {
+.btn-gradient-facebook {
     background: linear-gradient(
             90deg,
             rgba(10, 9, 202, 1) 0%,

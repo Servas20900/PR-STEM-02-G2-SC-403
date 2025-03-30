@@ -1,49 +1,46 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
-    <head th:fragment="head">
-        <title>EBENEZER - Ajustes</title>
-        <meta charset="UTF-8"/>
-        <link rel="icon" type="image/png" th:href="@{/img/1.png}"/>
-        <link rel="stylesheet" th:href="@{/css/normalize.css}"/>
-        <link rel="stylesheet" th:href="@{/css/styleP2.css}"/>
-        <link rel="stylesheet" th:href="@{/css/perfil.css}"/>
-        <link rel="stylesheet" th:href="@{/css/homeStyle.css}"/>
-        <link rel="stylesheet" th:href="@{/css/styleServicios.css}"/>
-        <link rel="stylesheet" th:href="@{/css/ajustesStyle.css}"/>
-        <link rel="stylesheet" th:href="@{/css/pagoStyle.css}"/>
-    </head>
+<head th:fragment="head">
+    <title>EBENEZER - Ajustes</title>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/png" th:href="@{/img/1.png}"/>
+    <link rel="stylesheet" th:href="@{/css/normalize.css}"/>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+    <link rel="stylesheet" th:href="@{/css/perfil.css}"/>
+    <link rel="stylesheet" th:href="@{/css/homeStyle.css}"/>
+    <link rel="stylesheet" th:href="@{/css/styleServicios.css}"/>
+    <link rel="stylesheet" th:href="@{/css/ajustesStyle.css}"/>
+    <link rel="stylesheet" th:href="@{/css/pagoStyle.css}"/>
+</head>
 
-    <body>
-       
-        <header th:fragment="header">
-            <nav class="navbar">
-                <div class="navbar-items">
+<body>
 
-                    <div class="navbar-right-side">
-                        <ul class="navbar-links">
-                            <li><a th:href="@{/perfil/listado}">Perfil</a></li>
-                            <li><a th:href="@{/reservar}">Reservar</a></li>
-                            <li><a th:href="@{/ServiciosAdicionales}">Servicios Adicionales</a></li>
-                            <li><span class="logo-font navbar-logo"><a th:href="@{/home}">EBENEZER</a></span></li>
-                            <li><a th:href="@{/pago}">Pago</a></li>
-                            <li><a th:href="@{/blog}">Blogs - Artículos</a></li>
-                            <li><a th:href="@{/ajustes}">Ajustes</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </header>
+<header th:fragment="header">
+    <nav class="navbar">
+        <div class="navbar-items navbar-items-private">
+            <ul class="navbar-links">
+                <li><a th:href="@{/reservar}">Reservar</a></li>
+                <li><a th:href="@{/ServiciosAdicionales}">Tienda</a></li>
+                <li><a th:href="@{/blog}">Blogs</a></li>
+                <li><span class="logo-font navbar-logo"><a th:href="@{/home}">EBENEZER</a></span></li>
+                <li><a th:href="@{/pago}">Pago</a></li>
+                <li><a th:href="@{/perfil/listado}">Perfil</a></li>
+                <li><a th:href="@{/ajustes}">Ajustes</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
 
-        <footer>
-            <div class="container text-center">
-                <p>© 2025 Ebenezer Gym. Todos los derechos reservados.</p>
-                <div>
-                    <a href="#" class="text-white mx-2"><i class="fab fa-facebook fa-lg"></i></a>
-                    <a href="#" class="text-white mx-2"><i class="fab fa-instagram fa-lg"></i></a>
-                    <a href="#" class="text-white mx-2"><i class="fab fa-twitter fa-lg"></i></a>
-                </div>
-            </div>
-        </footer>
-    </body>
+<footer>
+    <div class="container text-center">
+        <p>© 2025 Ebenezer Gym. Todos los derechos reservados.</p>
+        <div>
+            <a href="#" class="text-white mx-2"><i class="fab fa-facebook fa-lg"></i></a>
+            <a href="#" class="text-white mx-2"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="#" class="text-white mx-2"><i class="fab fa-twitter fa-lg"></i></a>
+        </div>
+    </div>
+</footer>
+</body>
 </html>
