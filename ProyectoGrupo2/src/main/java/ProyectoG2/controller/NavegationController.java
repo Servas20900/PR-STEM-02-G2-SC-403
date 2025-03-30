@@ -8,61 +8,61 @@ public class NavegationController {
 
     @GetMapping("/") // Página principal
     public String mostrarIndex() {
-        return "index"; // Esto buscará index.html en templates/
+        return "public/index"; // Esto buscará index.html en templates/
     }
 
     @GetMapping("/sede") // Nueva ruta para vista.html
     public String mostrarSede() {
-        return "sede"; // Esto buscará vista.html en templates/
+        return "public/sede"; // Esto buscará vista.html en templates/
     }
 
     @GetMapping("/promociones") // Nueva ruta para vista.html
     public String mostrarPromociones() {
-        return "promociones"; // Esto buscará vista.html en templates/
+        return "public/promociones"; // Esto buscará vista.html en templates/
     }
 
     @GetMapping("/contacto") // Nueva ruta para vista.html
     public String mostrarContacto() {
-        return "contacto"; // Esto buscará vista.html en templates/
+        return "public/contacto"; // Esto buscará vista.html en templates/
     }
 
     @GetMapping("/home") // Nueva ruta para vista.html
     public String mostrarHome() {
-        return "home"; // Esto buscará vista.html en templates/
+        return "private/home"; // Esto buscará vista.html en templates/
     }
 
     @GetMapping("/perfil") // Nueva ruta para vista.html
     public String mostrarPerfil() {
-        return "perfil"; // Esto buscará vista.html en templates/
+        return "private/perfil"; // Esto buscará vista.html en templates/
     }
 
     @GetMapping("/blog") // Nueva ruta para blogs.html
     public String mostrarBlogs() {
-        return "blog"; // Buscará blogs.html en templates/
+        return "private/blog"; // Buscará blogs.html en templates/
     }
 
     @GetMapping("/ServiciosAdicionales") // Nueva ruta para blogs.html
     public String mostrarServiciosAdicionales() {
-        return "ServiciosAdicionales"; // Buscará blogs.html en templates/
+        return "private/ServiciosAdicionales"; // Buscará blogs.html en templates/
     }
 
     @GetMapping("/ajustes")
     public String mostrarAjustes() {
-        return "ajustes";
+        return "private/ajustes";
     }
 
     @GetMapping("/pago")
     public String mostrarPago() {
-        return "pago";
+        return "private/pago";
     }
 
     @GetMapping("/login")
     public String mostrarLogin() {
-        return "login";
+        return "public/login";
     };
 
     @GetMapping("/singup")
     public String mostrarSingup() {
-        return "singup";
+        return "public/singup";
     };
 }

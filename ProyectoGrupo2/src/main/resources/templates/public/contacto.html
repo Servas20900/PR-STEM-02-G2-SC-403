@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/199/xhtml">
-  <head th:replace="~{layout/plantilla :: head}">
+  <head th:replace="~{common/public_navigation :: head}">
     <link th:href="@{/css/indexStyles.css}" rel="stylesheet" />
     <title>EBENEZER</title>
   </head>
   <body>
-    <header th:replace="~{layout/plantilla :: header}" />
+    <header th:replace="~{common/public_navigation :: header}" />
 
     <main class="container">
       <h1 class="text-center">Contactanos!</h1>
@@ -46,6 +46,6 @@
       </section>
     </main>
 
-    <footer th:replace="~{layout/plantilla :: footer}" />
+    <footer th:replace="~{common/public_navigation :: footer}" />
   </body>
 </html>

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns="http://www.w3.org/199/xhtml">
-    <head th:replace="~{layout/plantilla2 :: head}">
+    <head th:replace="~{common/private_navigation :: head}">
         <link th:href="@{/css/indexStyles.css}" rel="stylesheet"/> 
         <title>EBENEZER</title>
     </head>
     <body>
-        <header th:replace="~{layout/plantilla2 :: header}"/>
+        <header th:replace="~{common/private_navigation :: header}"/>
                     
             <main class="settings-container">
                 <h1 class="settings-title">Ajustes</h1>
@@ -14,7 +14,7 @@
                     <!-- Menú lateral -->
                     <aside class="settings-menu">
                         <ul>
-                            <li><a th:href="@{/perfil/listado}" class="active">Perfil</a></li>
+                            <li><a th:href="@{/templates/private/perfil/listado}" class="active">Perfil</a></li>
                             <li><a th:href="@{/ajustes}" class="active">General</a></li>
                             <li><a th:href="@{/pago}" class="active">Pago</a></li>
                         </ul>
@@ -23,7 +23,7 @@
                     <!-- Información del usuario -->
                     <section class="settings-profile">
                         <div class="profile-card">
-                            <img  src="/img/batifoto.png"alt="Foto de perfil" class="profile-picture"/>
+                            <img src="/img/batifoto.png" alt="Foto de perfil" class="profile-picture"/>
                             <h2 style="color: black;" >Nombre del usuario</h2>
                             <p >email@ejemplo.com</p>
                             <div class="profile-details">
@@ -38,6 +38,6 @@
             </main>
 
 
-        <footer th:replace="~{layout/plantilla2 :: footer}"/>
+        <footer th:replace="~{common/private_navigation :: footer}"/>
     </body>
 </html>

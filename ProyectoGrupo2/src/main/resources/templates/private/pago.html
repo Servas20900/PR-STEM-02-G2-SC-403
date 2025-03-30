@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/199/xhtml">
-<head th:replace="~{layout/plantilla2 :: head}">
+<head th:replace="~{common/private_navigation :: head}">
     <title>EBENEZER</title>
 </head>
     <body>
-        <header th:replace="~{layout/plantilla2 :: header}"/>
+        <header th:replace="~{common/private_navigation :: header}"/>
 
             <div class="container-pago">
                 <h2>Ingresá un método de pago</h2>
@@ -26,6 +26,6 @@
                 </p>
             </div>
 
-        <footer th:replace="~{layout/plantilla2 :: footer}" />
+        <footer th:replace="~{common/private_navigation :: footer}" />
     </body>
 </html>

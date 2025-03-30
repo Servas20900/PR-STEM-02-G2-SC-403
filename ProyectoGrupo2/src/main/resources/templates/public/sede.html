@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/199/xhtml">
-  <head th:replace="~{layout/plantilla :: head}">
+  <head th:replace="~{common/public_navigation :: head}">
     <title>EBENEZER</title>
   </head>
   <body>
-    <header th:replace="~{layout/plantilla :: header}" />
+    <header th:replace="~{common/public_navigation :: header}" />
 
     <section class="hero">
       <img src="/img/landing.png" class="hero-img" alt="Gym Ebenezer" />
@@ -32,6 +32,6 @@
       </div>
     </div>
 
-    <footer th:replace="~{layout/plantilla :: footer}" />
+    <footer th:replace="~{common/public_navigation :: footer}" />
   </body>
 </html>
