@@ -29,9 +29,4 @@ public class PrivateNavigationController {
     public String mostrarAjustes() {
         return "private/ajustes";
     }
-
-    @GetMapping("/clases")
-    public String mostrarClases() {
-        return "private/clases/clases";
-    }
 }

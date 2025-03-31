@@ -32,78 +32,25 @@
         </div>
     </section>
     <section class="clases">
-        <article class="clase-card clase-card--premium">
+        <article class="clase-card" th:each="clase : ${clases}">
             <div class="clase-card--heading">
-                <h3>Clase de activateee</h3>
+                <h3 th:text="${clase.nombre_clase}"></h3>
                 <div>
                     <i class="fa-solid fa-users fa-lg"></i>
                     <span>20/20</span>
                 </div>
             </div>
             <div class="clase-card--content">
-                <p><span>Instructor: </span><span>Ejemplp</span></p>
-                <p><span>Dificultad: </span><span>Ejemplp</span></p>
-                <p><span>Tipo: </span><span>Ejemplp</span></p>
-                <p><span>Horario: </span><span>Ejemplp</span></p>
+                <p><span>Instructor: </span><span th:text="${clase.instructor}"></span></p>
+                <p><span>Dificultad: </span><span th:text="${clase.dificultad}"></span></p>
+                <p><span>Tipo: </span><span th:text="${clase.tipo}"></span></p>
+                <p><span>Horario: </span><span th:text="${clase.horario}"></span></p>
             </div>
             <div class="clase-card--btns">
-                <a class="btn primary-btn">Ver detalles</a>
+                <a class="btn primary-btn">Reservar clase</a>
             </div>
         </article>
-        <article class="clase-card clase-card--premium">
-            <div class="clase-card--heading">
-                <h3>Clase activateee</h3>
-                <div>
-                    <i class="fa-solid fa-users fa-lg"></i>
-                    <span>20/20</span>
-                </div>
-            </div>
-            <div class="clase-card--content">
-                <p><span>Instructor: </span><span>Ejemplp</span></p>
-                <p><span>Dificultad: </span><span>Ejemplp</span></p>
-                <p><span>Tipo: </span><span>Ejemplp</span></p>
-                <p><span>Horario: </span><span>Ejemplp</span></p>
-            </div>
-            <div class="clase-card--btns">
-                <a class="btn primary-btn">Ver detalles</a>
-            </div>
-        </article>
-        <article class="clase-card clase-card--premium">
-            <div class="clase-card--heading">
-                <h3>Clase activateee</h3>
-                <div>
-                    <i class="fa-solid fa-users fa-lg"></i>
-                    <span>20/20</span>
-                </div>
-            </div>
-            <div class="clase-card--content">
-                <p><span>Instructor: </span><span>Ejemplp</span></p>
-                <p><span>Dificultad: </span><span>Ejemplp</span></p>
-                <p><span>Tipo: </span><span>Ejemplp</span></p>
-                <p><span>Horario: </span><span>Ejemplp</span></p>
-            </div>
-            <div class="clase-card--btns">
-                <a class="btn primary-btn">Ver detalles</a>
-            </div>
-        </article>
-        <article class="clase-card clase-card--premium">
-            <div class="clase-card--heading">
-                <h3>Clase activateee</h3>
-                <div>
-                    <i class="fa-solid fa-users fa-lg"></i>
-                    <span>20/20</span>
-                </div>
-            </div>
-            <div class="clase-card--content">
-                <p><span>Instructor: </span><span>Ejemplp</span></p>
-                <p><span>Dificultad: </span><span>Ejemplp</span></p>
-                <p><span>Tipo: </span><span>Ejemplp</span></p>
-                <p><span>Horario: </span><span>Ejemplp</span></p>
-            </div>
-            <div class="clase-card--btns">
-                <a class="btn primary-btn">Ver detalles</a>
-            </div>
-        </article>
+
     </section>
 </main>
 
