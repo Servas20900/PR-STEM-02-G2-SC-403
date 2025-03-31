@@ -29,7 +29,7 @@ public class UsuarioController {
         List<Usuario> usuarios = usuarioService.getUsuarios();
         model.addAttribute("usuarios", usuarios);
         model.addAttribute("totalUsuarios", usuarios.size());
-        return "/perfil/listado"; // Carga el archivo listado.html dentro de templates/perfil/
+        return "/private/perfil/listado"; // Carga el archivo listado.html dentro de templates/perfil/
     }
 
     // Mostrar el formulario para agregar o modificar un usuario
