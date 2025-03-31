@@ -26,16 +26,31 @@ CREATE TABLE Promociones (
 CREATE TABLE Clases (
     id_clase INT AUTO_INCREMENT PRIMARY KEY,
     nombre_clase VARCHAR(255) NOT NULL,
-    descripcion TEXT,
-    instructor VARCHAR(255) NOT NULL,
+    instructor VARCHAR(125) NOT NULL,
+    dificultad VARCHAR(35) NOT NULL,
+    tipo VARCHAR(35) NOT NULL,
+    horario DATETIME NOT NULL
 );
 
--- Tabla Servicios Adicionales
-CREATE TABLE Servicios_Adicionales (
+CREATE TABLE Asistencia_Clases(
+	id_asistencia INT AUTO_INCREMENT PRIMARY KEY,
+    id_clase INT NOT NULL,
+    capacidad_maxima INT NOT NULL,
+    usuarios_registrados INT NOT NULL,
+    FOREIGN KEY(id_clase) REFERENCES Clases(id_clase)
+);
+
+-- Tabla Productos
+CREATE TABLE Productos (
     id_articulo INT AUTO_INCREMENT PRIMARY KEY,
     nombre_articulo VARCHAR(255) NOT NULL,
-    precio DECIMAL(10, 2) NOT NULL,
-    img VARCHAR(255) -- Ruta de la imagen
+    descripcion TEXT NOT NULL,
+    img VARCHAR(255), -- Ruta de la imagen
+	precio DECIMAL(10, 2) NOT NULL,
+	marca VARCHAR(50) NOT NULL,
+    sexo VARCHAR(20) NOT NULL,
+    talla VARCHAR(5),
+    categoria VARCHAR(55) NOT NULL
 );
 
 -- Tabla Blog
@@ -45,7 +60,6 @@ CREATE TABLE Blog (
     img VARCHAR(255), -- Ruta de la imagen
     contenido TEXT NOT NULL,
     categoria VARCHAR(255)  NOT NULL
-
 );
 
 -- Crear usuario y otorgarle permisos
