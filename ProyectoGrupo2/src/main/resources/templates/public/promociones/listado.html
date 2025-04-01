@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/199/xhtml">
+
+<head th:replace="~{layout/plantilla :: head}">
+    <title>TechShop</title>
+</head>
+
+<body>
+    <header th:replace="~{common/public_navigation :: header}" />
+
+    <section th:replace="~{public/promociones/fragmentos :: botonesAgregar}" />
+    <section th:replace="~{public/promociones/fragmentos :: agregarpromociones}" />
+    <section th:replace="~{public/promociones/fragmentos :: listadopromocioness}" />
+
+    <footer th:replace="~{common/public_navigation :: footer}" />
+</body>
+
+</html>
