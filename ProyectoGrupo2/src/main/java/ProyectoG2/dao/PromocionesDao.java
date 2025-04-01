@@ -1,8 +1,8 @@
 package ProyectoG2.dao;
 
-import org.springframework.data.jpa.repository.JpaRepository;
 import ProyectoG2.domain.Promociones;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface PromocionesDao extends JpaRepository <Promociones,Integer> {
-
+public interface PromocionesDao extends JpaRepository<Promociones, Long> {
 }
+

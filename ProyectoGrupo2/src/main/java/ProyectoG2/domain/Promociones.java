@@ -15,15 +15,15 @@ public class Promociones implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name ="id_promocion")
-    private int id_promocion;
+    private long id_promocion;
     private String titulo;
     private String descripcion;
-    private int precio;
+    private Double precio;
 
 
     public Promociones() {}
 
-    public Promociones(String titulo, String descripcion,int precio) {
+    public Promociones(String titulo, String descripcion,Double precio) {
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.precio = precio;
