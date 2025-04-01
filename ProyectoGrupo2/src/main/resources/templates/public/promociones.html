@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/199/xhtml">
+
+<head th:replace="~{common/public_navigation :: head}">
+    <title>EBENEZER</title>
 </head>
+
 <body>
-    <p>Aca va promociones</p>
+    <header th:replace="~{common/public_navigation :: header}" />
+    
+
+    <footer th:replace="~{common/public_navigation :: footer}" />
 </body>
+
 </html>
