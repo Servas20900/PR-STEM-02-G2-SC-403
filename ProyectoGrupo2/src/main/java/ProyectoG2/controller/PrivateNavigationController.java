@@ -20,10 +20,7 @@ public class PrivateNavigationController {
         return "private/blog"; // Buscará blogs.html en templates/
     }
 
-    @GetMapping("/tienda") // Nueva ruta para blogs.html
-    public String mostrarServiciosAdicionales() {
-        return "private/tienda"; // Buscará blogs.html en templates/
-    }
+
 
     @GetMapping("/ajustes")
     public String mostrarAjustes() {
