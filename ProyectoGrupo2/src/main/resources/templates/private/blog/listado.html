@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/199/xhtml">
+
+<head th:replace="~{common/private_navigation :: head}">
+    <title>Listado de Blogs</title>
+</head>
+<body>
+    <header th:replace="~{common/private_navigation :: header}" />
+    <div class="container">
+        <h2>Listado de Blogs</h2>
+        <a th:href="@{/blog/nuevo}" class="btn btn-primary">Agregar Nuevo Blog</a>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Imagen</th>
+                    <th>Título</th>
+                    <th>Categoría</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="blog : ${blogs}">
+                    <td><img th:src="@{${blog.img}}" alt="Imagen del Blog" class="blog-img"></td>
+                    <td th:text="${blog.titulo}"></td>
+                    <td th:text="${blog.categoria}"></td>
+                    <td>
+                        <a th:href="@{/blog/ver/{id}(id=${blog.id_articulo_blog})}" class="btn btn-info">Ver</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <footer th:replace="~{common/private_navigation :: footer}" />
+</body>
+</html>

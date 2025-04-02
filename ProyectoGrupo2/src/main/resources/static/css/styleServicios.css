@@ -1,14 +1,13 @@
-
-
-.container {
+.container-tienda {
     padding: 40px;
+    
 }
 
 h1 {
     font-size: 28px;
 }
 
-.filters {
+.filters-tienda {
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -16,8 +15,8 @@ h1 {
     flex-wrap: wrap;
 }
 
-.filters input,
-.filters select {
+.filters-tienda input,
+.filters-tienda select {
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -25,51 +24,52 @@ h1 {
     border: 1px solid black;
 }
 
-.filters input {
+.filters-tienda input {
     width: 200px;
 }
 
-.filters select {
+.filters-tienda select {
     background: white;
     cursor: pointer;
 }
 
-.products {
+.products-tienda {
     display: flex;
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
 }
 
-.card {
-    width: 250px;
-    height: 220px; 
+.card-tienda {
+    width: 300px;
+    height: 250px; 
     background: white;
     border-radius: 10px;
     overflow: hidden;
     text-align: left;
     border-color: black;
     border: 1px solid black;
+
 }
 
-.card img {
+.card-tienda img {
     width: 120%;
     height: 100px; 
     object-fit: cover;
     display: block;
 }
 
-.info {
+.info-tienda {
     padding: 5px;
 }
 
-.info h3 {
+.info-tienda h3 {
     font-size: 12px;
     margin: 5px 0;
     color: black;
 }
 
-.info p {
+.info-tienda p {
     color: gray;
     font-size: 14px;
 }
@@ -82,4 +82,54 @@ button {
     border: none;
     cursor: pointer;
     font-size: 14px;
+    border-radius: 40px;
+}
+
+/* Estilos para el formulario de agregar productos */
+.form-container-tienda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: #f9f9f9;
+}
+
+.form-container-tienda input {
+    margin: 5px;
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.form-container-tienda button {
+    width: 100%;
+    padding: 10px;
+    background: black;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.form-container-tienda button:hover {
+    background: darkgray;
+}
+
+/* Estilos para el botón de eliminar */
+.delete-button-tienda {
+    border-radius: 40px;
+    background: red;
+    color: white;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 1px;
+}
+
+.delete-button-tienda:hover {
+    background: darkred;
 }

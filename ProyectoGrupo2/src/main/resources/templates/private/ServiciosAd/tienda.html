@@ -6,10 +6,10 @@
 <body>
     <header th:replace="~{common/private_navigation :: header}" />
 
-    <div class="container">
+    <div class="container-tienda">
         <h1>Servicios adicionales</h1>
 
-        <div class="filters">
+        <div class="filters-tienda">
             <input type="text" placeholder="Buscar">
             <select>
                 <option>Marca</option>
@@ -28,14 +28,16 @@
             </select>
         </div>
 
-        <div class="products">
-            <div class="card" th:each="producto : ${productos}">
-                <img th:src="@{/img/{img}(img=${producto.img})}" th:alt="${producto.nombreArticulo}" />
-
-                <div class="info">
+        <div class="products-tienda">
+            <div class="card-tienda" th:each="producto : ${productos}">
+                <img th:src="@{${producto.img}}" th:alt="${producto.nombreArticulo}" />
+                <div class="info-tienda">
                     <h3 th:text="${producto.nombreArticulo}"></h3>
                     <p th:text="'Precio: $' + ${producto.precio}"></p>
                     <button>Ver detalles</button>
+                    <a th:href="@{/tienda/eliminar/{id}(id=${producto.idArticulo})}">
+                        <button type="button" class="delete-button-tienda">Eliminar</button>
+                    </a>
                 </div>
             </div>
         </div>
