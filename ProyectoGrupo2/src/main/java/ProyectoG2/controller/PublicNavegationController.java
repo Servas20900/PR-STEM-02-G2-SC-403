@@ -40,4 +40,5 @@ public class PublicNavegationController {
     public String mostrarSingup() {
         return "public/singup";
     };
+    
 }

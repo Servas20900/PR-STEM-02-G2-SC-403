@@ -12,7 +12,7 @@ public class PrivateNavigationController {
 
     @GetMapping("/perfil") // Nueva ruta para vista.html
     public String mostrarPerfil() {
-        return "private/perfil"; // Esto buscará vista.html en templates/
+        return "private/perfil/listado"; // Esto buscará vista.html en templates/
     }
 
     @GetMapping("/blog") // Nueva ruta para blogs.html

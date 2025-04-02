@@ -1,5 +1,5 @@
 package ProyectoG2.controller;
-
+/*
 import ProyectoG2.domain.Usuario;
 import ProyectoG2.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,4 +52,4 @@ public class UsuarioController {
         model.addAttribute("usuario", usuario);
         return "perfil/perfil"; // Carga la vista con los datos del usuario
     }
-}
+}**/
