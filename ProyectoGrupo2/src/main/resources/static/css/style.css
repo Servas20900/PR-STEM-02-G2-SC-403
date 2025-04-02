@@ -553,6 +553,57 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     align-self: center;
 }
 
+/* admin */
+.admin-kpis{
+    display: flex;
+    justify-content: space-between;
+}
+
+.admin-kpi{
+    width: 150px;
+    height: 100px;
+    background-color: #0a5bff;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    gap: 10px;
+}
+
+.admin-kpi-number{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.admin-modules{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-modules-module{
+    width: 250px;
+    height: 150px;
+    background-color: #efefef;
+    color: #333;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-module-actions{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+}
+
 footer {
     display: flex;
     justify-content: center;

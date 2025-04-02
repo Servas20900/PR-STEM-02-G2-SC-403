@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/199/xhtml">
+<head th:replace="~{common/admin_navigation :: head}">
+    <title>EBENEZER</title>
+</head>
+<body>
+<header th:replace="~{common/admin_navigation :: header}" />
+
+<main class="container">
+    <h1>Dashboard de administrador</h1>
+
+    <section class="admin-kpis">
+        <article class="admin-kpi">
+            <span class="admin-kpi-number">23</span>
+            <span class="admin-kpi-title">Productos</span>
+        </article>
+        <article class="admin-kpi">
+            <span class="admin-kpi-number">12</span>
+            <span class="admin-kpi-title">Clases</span>
+        </article>
+        <article class="admin-kpi">
+            <span class="admin-kpi-number">2</span>
+            <span class="admin-kpi-title">Sedes</span>
+        </article>
+        <article class="admin-kpi">
+            <span class="admin-kpi-number">50</span>
+            <span class="admin-kpi-title">Blogs</span>
+        </article>
+        <article class="admin-kpi">
+            <span class="admin-kpi-number">300</span>
+            <span class="admin-kpi-title">Usuarios</span>
+        </article>
+    </section>
+
+
+    <section>
+        <h2>Modulos disponibles</h2>
+        <section class="admin-modules">
+            <article class="admin-modules-module">
+                <h3>Productos</h3>
+                <div class="admin-module-actions">
+                    <a class="btn standard-btn-black"><i class="fa-solid fa-plus fa-lg" style="color: #4cc85f;"></i></a>
+                    <a class="btn standard-btn-black"><i class="fa-solid fa-list fa-lg"></i></a>
+                </div>
+            </article>
+        </section>
+    </section>
+</main>
+
+<footer th:replace="~{common/admin_navigation :: footer}" />
+</body>
+</html>
