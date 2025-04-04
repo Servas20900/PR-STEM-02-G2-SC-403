@@ -7,15 +7,15 @@
 <header th:replace="~{common/admin_navigation :: header}"/>
 
 <main class="container">
-    <h1>Productos</h1>
+    <h1>Clases</h1>
 
     <section class="admin-kpis">
-        <article th:replace="~{private/admin/componentes/kpi :: admin_kpi (Productos,${total_productos})}"></article>
+        <article th:replace="~{private/admin/componentes/kpi :: admin_kpi (Clases,${total_clases})}"></article>
     </section>
 
     <section class="module-items">
-            <div th:replace="~{private/admin/componentes/lista_items :: items_header (Id,Nombre,Precio,Marca,Categoria)}"></div>
-        <div th:replace="~{private/admin/componentes/lista_items :: item_list (${productos})}"></div>
+        <div th:replace="~{private/admin/componentes/lista_items :: items_header (Id,Nombre,Precio,Marca,Categoria)}"></div>
+        <div th:replace="~{private/admin/componentes/lista_items :: item_list (${clases})}"></div>
     </section>
 </main>
 

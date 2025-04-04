@@ -10,26 +10,9 @@
     <h1>Dashboard de administrador</h1>
 
     <section class="admin-kpis">
-        <article class="admin-kpi">
-            <span class="admin-kpi-number">23</span>
-            <span class="admin-kpi-title">Productos</span>
-        </article>
-        <article class="admin-kpi">
-            <span class="admin-kpi-number">12</span>
-            <span class="admin-kpi-title">Clases</span>
-        </article>
-        <article class="admin-kpi">
-            <span class="admin-kpi-number">2</span>
-            <span class="admin-kpi-title">Sedes</span>
-        </article>
-        <article class="admin-kpi">
-            <span class="admin-kpi-number">50</span>
-            <span class="admin-kpi-title">Blogs</span>
-        </article>
-        <article class="admin-kpi">
-            <span class="admin-kpi-number">300</span>
-            <span class="admin-kpi-title">Usuarios</span>
-        </article>
+        <article th:replace="~{private/admin/componentes/kpi :: admin_kpi (Productos,${total_productos})}"></article>
+        <article th:replace="~{private/admin/componentes/kpi :: admin_kpi (Clases,${total_productos})}"></article>
+        <article th:replace="~{private/admin/componentes/kpi :: admin_kpi (Blogs,${total_blogs})}"></article>
     </section>
 
 
@@ -40,7 +23,14 @@
                 <h3>Productos</h3>
                 <div class="admin-module-actions">
                     <a class="btn standard-btn-black"><i class="fa-solid fa-plus fa-lg" style="color: #4cc85f;"></i></a>
-                    <a class="btn standard-btn-black"><i class="fa-solid fa-list fa-lg"></i></a>
+                    <a class="btn standard-btn-black"  th:href="@{admin/productos}"><i class="fa-solid fa-list fa-lg"></i></a>
+                </div>
+            </article>
+            <article class="admin-modules-module">
+                <h3>Clases</h3>
+                <div class="admin-module-actions">
+                    <a class="btn standard-btn-black"><i class="fa-solid fa-plus fa-lg" style="color: #4cc85f;"></i></a>
+                    <a class="btn standard-btn-black"  th:href="@{admin/clases}"><i class="fa-solid fa-list fa-lg"></i></a>
                 </div>
             </article>
         </section>
