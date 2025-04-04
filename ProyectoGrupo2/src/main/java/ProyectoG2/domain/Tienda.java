@@ -4,9 +4,11 @@ package ProyectoG2.domain;
 import jakarta.persistence.*;
 import java.io.Serializable;
 import lombok.Data;
+import lombok.Getter;
 
 @Data
 @Entity
+@Getter
 @Table(name = "Productos")
 public class Tienda implements Serializable {
 

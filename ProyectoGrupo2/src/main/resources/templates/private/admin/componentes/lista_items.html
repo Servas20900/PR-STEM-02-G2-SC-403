@@ -1,0 +1,15 @@
+<div class="module-items-headers" th:fragment="items_header (col1,col2,col3,col4,col5)">
+    <span th:text="${col1}"></span>
+    <span th:text="${col2}"></span>
+    <span th:text="${col3}"></span>
+    <span th:text="${col4}"></span>
+    <span th:text="${col5}"></span>
+</div>
+
+<div class="module-items-item" th:each="item : ${items}" th:fragment="item_list (items)">
+    <span th:text="${item[0]}"></span>
+    <span th:text="${item[1]}"></span>
+    <span th:text="${item[2]}"></span>
+    <span th:text="${item[3]}"></span>
+    <span th:text="${item[4]}"></span>
+</div>

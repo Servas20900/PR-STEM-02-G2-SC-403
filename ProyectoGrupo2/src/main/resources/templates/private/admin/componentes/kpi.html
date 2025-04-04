@@ -1,13 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-
-</body>
-</html>
+<article class="admin-kpi" th:fragment="admin_kpi (kpi_number)">
+    <span class="admin-kpi-number" th:text="${kpi_number}"></span>
+    <span class="admin-kpi-title">Productos</span>
+</article>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/199/xhtml">
+<head th:replace="~{common/admin_navigation :: head}">
+    <title>EBENEZER</title>
+</head>
+<body>
+<header th:replace="~{common/admin_navigation :: header}"/>
+
+<main class="container">
+    <h1>Productos</h1>
+
+    <section class="admin-kpis">
+        <article th:replace="~{private/admin/componentes/kpi :: admin_kpi (kpi_number=${total_productos})}"></article>
+    </section>
+
+    <section class="module-items">
+            <div th:replace="~{private/admin/componentes/lista_items :: items_header (Id,Nombre,Precio,Marca,Categoria)}"></div>
+        <div th:replace="~{private/admin/componentes/lista_items :: item_list (${productos})}"></div>
+    </section>
+</main>
+
+<footer th:replace="~{common/admin_navigation :: footer}"/>
+</body>
+</html>
