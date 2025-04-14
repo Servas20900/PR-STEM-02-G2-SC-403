@@ -17,6 +17,6 @@ public class Ruta implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idRuta;
 
-    private String patron;   // ejemplo: /carrito/** o /admin/**
-    private String rolName;  // ejemplo: ROLE_ADMIN
+    private String patron;   
+    private String rolName;  
 }
