@@ -31,10 +31,6 @@ public class PublicNavegationController {
         return "private/pago";
     }
 
-    @GetMapping("/login")
-    public String mostrarLogin() {
-        return "public/login";
-    };
 
     @GetMapping("/singup")
     public String mostrarSingup() {
