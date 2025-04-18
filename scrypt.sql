@@ -7,7 +7,6 @@ USE Proyecto;
 
 
 
-
 -- Tabla Promociones
 CREATE TABLE Promociones (
     id_promocion INT AUTO_INCREMENT PRIMARY KEY,
@@ -188,3 +187,5 @@ INSERT INTO constante (atributo, valor) VALUES
 ('paypal.mode', 'sandbox'),
 ('urlPaypalCancel', 'http://localhost/payment/cancel'),
 ('urlPaypalSuccess', 'http://localhost/payment/success');
+
+select * from Clases

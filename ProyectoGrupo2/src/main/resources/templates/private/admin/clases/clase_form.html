@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/199/xhtml">
+<head th:replace="~{common/admin_navigation :: head}">
+    <title>EBENEZER</title>
+</head>
+<body>
+<header th:replace="~{common/admin_navigation :: header}"/>
+
+<main class="container">
+    <h1 th:text="*{id} == null ? 'Nueva clase': 'Editando clase '+ ${clase.nombre_clase}"></h1>
+    <form th:action="@{/admin/clases/guardar}" th:object="${clase}" method="post" class="admin-form">
+        <div>
+            <label for="titulo">Nombre de clase</label>
+            <input type="text" id="titulo" th:field="*{nombre_clase}" required/>
+        </div>
+
+        <div>
+            <label for="titulo">Instructor</label>
+            <input type="text" id="titulo" th:field="*{instructor}" required/>
+        </div>
+
+        <div>
+            <label for="titulo">Dificultad</label>
+            <input type="text" id="titulo" th:field="*{dificultad}" required/>
+        </div>
+
+        <div>
+            <label for="titulo">Tipo</label>
+            <input type="text" id="titulo" th:field="*{tipo}" required/>
+        </div>
+
+        <div>
+            <label for="horario">Horario</label>
+            <input type="datetime-local" id="horario" name="horario" th:field="*{horario}" required>
+        </div>
+
+        <div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+    </form>
+
+
+</main>
+
+<footer th:replace="~{common/admin_navigation :: footer}"/>
+</body>
+</html>

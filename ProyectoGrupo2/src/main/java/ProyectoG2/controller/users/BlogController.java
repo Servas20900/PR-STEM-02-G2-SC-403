@@ -1,4 +1,4 @@
-package ProyectoG2.controller;
+package ProyectoG2.controller.users;
 
 import ProyectoG2.domain.Blog;
 import ProyectoG2.service.BlogService;

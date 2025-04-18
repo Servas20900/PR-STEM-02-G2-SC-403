@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.Optional;
+import java.util.OptionalInt;
 
 @Service
 public class ClaseServiceImpl implements ClaseService {
@@ -22,6 +24,11 @@ public class ClaseServiceImpl implements ClaseService {
     }
 
     @Override
+    public Optional<Clase> getClaseById(int id) {
+        return claseDao.findById(id);
+    }
+
+    @Override
     @Transactional
     public void save(Clase clase) {
         claseDao.save(clase);
@@ -31,4 +38,7 @@ public class ClaseServiceImpl implements ClaseService {
     public void delete(Clase clase) {
         claseDao.delete(clase);
     }
+
+    @Override
+    public void deleteById(int id) {claseDao.deleteById(id);}
 }

@@ -1,4 +1,4 @@
-package ProyectoG2.controller;
+package ProyectoG2.controller.users;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

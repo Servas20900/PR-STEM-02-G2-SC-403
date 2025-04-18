@@ -13,8 +13,8 @@
     max-width: 300px;
     margin: 10px auto;
 }
-form {
-    
+.pago-form {
+
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -23,7 +23,7 @@ form {
     padding: auto;
     border-radius: 20px;
 }
-input {
+.pago-form > input {
     width: 90%;
     padding: 10px;
     border: 1px solid #ccc;
