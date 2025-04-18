@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/199/xhtml">
+<head th:replace="~{common/admin_navigation :: head}">
+    <title>EBENEZER - Producto</title>
+</head>
+<body>
+<header th:replace="~{common/admin_navigation :: header}"/>
+
+<main class="container">
+    <h1 th:text="*{id_articulo} == null ? 'Nuevo producto' : 'Editando producto ' + ${producto.nombre_articulo}"></h1>
+    <form th:action="@{/admin/productos/guardar}" th:object="${producto}" method="post" class="admin-form">
+        <input type="hidden" th:field="*{id_articulo}" />
+
+
+        <div>
+            <label for="nombre_articulo">Nombre del producto</label>
+            <input type="text" id="nombre_articulo" th:field="*{nombre_articulo}" required/>
+        </div>
+
+        <div>
+            <label for="descripcion">Descripción</label>
+            <input type="text" id="descripcion" th:field="*{descripcion}" required/>
+        </div>
+
+        <div>
+            <label for="img">Ruta de imagen</label>
+            <input type="text" id="img" th:field="*{img}" placeholder="/img/productos/imagen.jpg"/>
+        </div>
+
+        <div>
+            <label for="precio">Precio</label>
+            <input type="number" step="0.01" id="precio" th:field="*{precio}" required/>
+        </div>
+
+        <div>
+            <label for="marca">Marca</label>
+            <input type="text" id="marca" th:field="*{marca}" required/>
+        </div>
+
+        <div>
+            <label for="sexo">Sexo</label>
+            <select id="sexo" th:field="*{sexo}" required>
+                <option value="">Seleccione una opción</option>
+                <option value="Hombre">Hombre</option>
+                <option value="Mujer">Mujer</option>
+                <option value="Unisex">Unisex</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="talla">Talla</label>
+            <input type="text" id="talla" th:field="*{talla}" placeholder="Ej: M, L, 42"/>
+        </div>
+
+        <div>
+            <label for="categoria">Categoría</label>
+            <input type="text" id="categoria" th:field="*{categoria}" required/>
+        </div>
+
+        <div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+    </form>
+</main>
+
+<footer th:replace="~{common/admin_navigation :: footer}"/>
+</body>
+</html>

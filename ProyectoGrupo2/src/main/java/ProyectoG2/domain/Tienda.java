@@ -17,8 +17,8 @@ public class Tienda implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_articulo")
-    private Long idArticulo;
-    private String nombreArticulo;
+    private Long id_articulo;
+    private String nombre_articulo;
     private String descripcion;
     private String img; 
     private Double precio;
@@ -26,18 +26,4 @@ public class Tienda implements Serializable {
     private String sexo;
     private String talla;
     private String categoria;
-
-    public Tienda() {
-    }
-
-    public Tienda(String nombreArticulo, String descripcion, String img, Double precio, String marca, String sexo, String talla, String categoria) {
-        this.nombreArticulo = nombreArticulo;
-        this.descripcion = descripcion;
-        this.img = img;
-        this.precio = precio;
-        this.marca = marca;
-        this.sexo = sexo;
-        this.talla = talla;
-        this.categoria = categoria;
-    }
 }

@@ -11,11 +11,12 @@
 
     <section class="admin-kpis">
         <article th:replace="~{private/admin/componentes/kpi :: admin_kpi (Productos,${total_productos})}"></article>
+        <a th:href="@{/admin/productos/nuevo}" class="btn primary-btn">Agregar producto</a>
     </section>
 
     <section class="module-items">
-            <div th:replace="~{private/admin/componentes/lista_items :: items_header (Id,Nombre,Precio,Marca,Categoria)}"></div>
-        <div th:replace="~{private/admin/componentes/lista_items :: item_list (${productos})}"></div>
+        <div th:replace="~{private/admin/componentes/lista_items :: items_header (Id,Nombre,Precio,Marca,Categoria)}"></div>
+        <div th:replace="~{private/admin/componentes/lista_items :: item_list (${productos}, productos)}"></div>
     </section>
 </main>
 
