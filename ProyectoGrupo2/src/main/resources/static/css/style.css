@@ -616,7 +616,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .module-items-headers {
     display: grid;
-    grid-template-columns:repeat(6, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     width: 100%;
     height: 50px;
     align-items: center;
@@ -634,7 +634,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .module-items-item {
     display: grid;
-    grid-template-columns:repeat(6, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     width: 100%;
     height: 70px;
     align-items: center;
@@ -643,6 +643,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     background-color: #F3F3F3;
     margin-bottom: 5px;
     border-radius: 8px;
+    text-align: center;
 }
 
 .module-items-item:nth-of-type(odd) {
@@ -669,7 +670,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .admin-form > div > input,
-.admin-form > div > select {
+.admin-form > div > select,
+.admin-form > div > textarea {
     appearance: none;
     border: none;
     padding: 9px 7px;

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/199/xhtml">
+<head th:replace="~{common/admin_navigation :: head}">
+    <title>EBENEZER</title>
+</head>
+<body>
+<header th:replace="~{common/admin_navigation :: header}"/>
+
+<main class="container">
+    <h1 th:text="*{id} == null ? 'Nuevo blog': 'Editando blog '+ ${blog.titulo}"></h1>
+    <form th:action="@{/admin/blogs/guardar}" th:object="${blog}" method="post" class="admin-form">
+        <input type="hidden" th:field="*{id_articulo_blog}" />
+
+
+        <div>
+            <label for="titulo">Titulo</label>
+            <input type="text" id="titulo" th:field="*{titulo}" required/>
+        </div>
+
+        <div>
+            <label for="titulo">Categoria</label>
+            <input type="text" id="titulo" th:field="*{categoria}" required/>
+        </div>
+
+        <div>
+            <label for="titulo">Contenido</label>
+            <textarea type="text" id="titulo" th:field="*{contenido}" cols="30" rows="10" required></textarea>
+        </div>
+
+        <div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </div>
+    </form>
+
+
+</main>
+
+<footer th:replace="~{common/admin_navigation :: footer}"/>
+</body>
+</html>
