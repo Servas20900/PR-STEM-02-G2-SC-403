@@ -10,7 +10,6 @@
 
     <main class="settings-container">
         <div class="settings-content">
-            <!-- Menú lateral -->
             <aside class="settings-menu">
                 <ul>
                     <h1 class="settings-title">Ajustes</h1>
@@ -20,19 +19,13 @@
                 </ul>
             </aside>
 
-            <!-- Información del usuario -->
             <section class="settings-profile">
                 <div class="profile-card">
                     <i class="fa fa-user fa-4x user-icon"></i>
+                    <p th:text="${usuario.nombre}">Nombre</p>
                     <p th:if="${usuario != null}" th:text="${usuario.username}">Username</p>
-
                     <p th:text="${usuario.correo}">Correo</p>
                     <div class="profile-details">
-                        <div class="profile-card">
-                            <p th:text="${usuario.nombre}">Nombre</p>
-                        </div>
-                    </div>
-                    <!-- Botón de edición que redirige al formulario con el ID del usuario -->
                     <a class="edit-button" th:href="@{'/perfil/editar/' + ${usuario.idUsuario}}">Editar</a>
                 </div>
             </section>
