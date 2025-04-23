@@ -7,6 +7,15 @@
 <header th:replace="~{common/private_navigation :: header}"/>
 
 <main class="container">
+    <div th:if="${mensajeExito}" class="alerta alerta-succes">
+        <span th:text="${mensajeExito}"></span>
+    </div>
+
+    <div th:if="${mensajeError}" class="alerta alerta-warning" role="alert">
+        <span th:text="${mensajeError}"></span>
+    </div>
+
+
     <h1>Clases</h1>
     <section class="clases-filtros">
         <div class="clases-filtros-filtro">
@@ -57,5 +66,7 @@
 </main>
 
 <footer th:replace="~{common/private_navigation :: footer}"/>
+
+<script th:src="@{js/alert-msgs.js}"></script>
 </body>
 </html>
