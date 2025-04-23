@@ -34,7 +34,6 @@ public class Usuario implements Serializable {
     private String nombre;
     private String apellidos;
     private String correo;
-    private String telefono;
 
     @OneToMany
     @JoinColumn(name="id_usuario")
