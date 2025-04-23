@@ -115,7 +115,7 @@
 }
 
 .tarjeta-home:hover .superposicion-home {
-    background: rgba(0, 0, 0, 0.6); /* más oscuro al pasar el mouse */
+    background: rgba(0, 0, 0, 0.6); 
 }
 
 .separador-home {

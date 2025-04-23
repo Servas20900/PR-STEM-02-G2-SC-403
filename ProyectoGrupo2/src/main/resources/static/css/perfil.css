@@ -3,7 +3,6 @@
     margin: 40px auto;
     padding: 20px;
     border-radius: 10px;
-    /* fondo eliminado para dejar solo las cartas */
 }
 
 .settings-title {
@@ -24,7 +23,7 @@
     background-color: #fff;
     padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* flotante */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
 }
 
 .settings-menu ul {
@@ -58,7 +57,7 @@
     border-radius: 10px;
     text-align: center;
     width: 350px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* efecto flotante */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .user-icon {

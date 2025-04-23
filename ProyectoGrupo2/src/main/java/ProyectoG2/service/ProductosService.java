@@ -11,5 +11,5 @@ public interface ProductosService {
 
     List<Productos> buscarPorFiltros(String nombreArticulo, String marca, String sexo, String talla);
 
-    Productos buscarPorId(Long id);  // Este es el nuevo método
+    Productos buscarPorId(Long id); 
 }

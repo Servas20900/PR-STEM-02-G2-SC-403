@@ -7,7 +7,10 @@ import java.util.Optional;
 
 public interface BlogService {
     List<Blog> getAllBlogs();
+    
     void saveBlog(Blog blog);
+
     void deleteBlog(Long id);
+
     Optional<Blog> getBlogById(Long id);
 }
