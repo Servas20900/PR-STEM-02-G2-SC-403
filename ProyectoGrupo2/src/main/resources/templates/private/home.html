@@ -9,7 +9,7 @@
 
       
     <div class="container">
-      <h1>Bienvenido</h1>
+      <h1 class="saludo">Bienvenido <span th:text="${usuario.nombre}">Usuario</span></h1>
       <div class="recomendaciones-home">
         <div class="tarjeta-home">
           <img th:src="@{/img/ImgPesasPiso.png}" alt="img"/>     
