@@ -1,7 +1,7 @@
 package ProyectoG2.domain;
+
 import jakarta.persistence.*;
 import lombok.Data;
-
 import java.io.Serializable;
 
 

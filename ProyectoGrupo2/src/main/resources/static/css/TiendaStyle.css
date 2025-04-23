@@ -1,0 +1,122 @@
+/* General Styles */
+body.tienda-body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f9;
+    margin: 0;
+    padding: 0;
+    color: #0f1a2b;
+}
+
+.tienda-header, .tienda-footer {
+    background-color: #0f1a2b;
+    color: #fff;
+}
+
+.tienda-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tienda-filters {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.filter-form.tienda-filter-form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.tienda-input, .tienda-select, .tienda-button {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.tienda-input {
+    width: 100%;
+    max-width: 250px;
+}
+
+.tienda-select {
+    width: 150px;
+}
+
+.tienda-button {
+    background-color: #4dabf7;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.tienda-button:hover {
+    background-color: #369ce8;
+}
+
+/* Cards */
+.tienda-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.tienda-product-card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.tienda-product-card:hover {
+    transform: translateY(-10px);
+}
+
+.tienda-product-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 2px solid #ccc;
+}
+
+.tienda-product-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.tienda-product-name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0f1a2b;
+    margin-bottom: 10px;
+}
+
+.tienda-product-price {
+    font-size: 16px;
+    color: #4dabf7;
+    margin-bottom: 15px;
+}
+
+.tienda-btn-detalles {
+    padding: 8px 15px;
+    background-color: #4dabf7;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.tienda-btn-detalles:hover {
+    background-color: #369ce8;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{common/private_navigation :: head}">
+    <title>EBENEZER</title>
+</head>
+<body>
+    <header th:replace="~{common/private_navigation :: header}" />
+    
+    <div class="container tienda-container" data-page="tienda">
+        <div class="filters tienda-filters">
+            <form action="/productos" method="get" class="filter-form tienda-filter-form">
+                <input type="text" name="nombreArticulo" placeholder="Buscar" th:value="${nombreArticulo}" class="tienda-input">
+                <select name="marca" class="tienda-select">
+                    <option value="">Marca</option>
+                    <option value="Nike" th:selected="${marca == 'Nike'}">Nike</option>
+                    <option value="Salomon" th:selected="${marca == 'Salomon'}">Salomon</option>
+                </select>
+                <select name="sexo" class="tienda-select">
+                    <option value="">Sexo</option>
+                    <option value="Hombre" th:selected="${sexo == 'Hombre'}">Hombre</option>
+                    <option value="Mujer" th:selected="${sexo == 'Mujer'}">Mujer</option>
+                </select>
+                <select name="talla" class="tienda-select">
+                    <option value="">Talla</option>
+                    <option value="S" th:selected="${talla == 'S'}">S</option>
+                    <option value="M" th:selected="${talla == 'M'}">M</option>
+                </select>
+            </form>
+        </div>
+    
+        <div class="card-grid tienda-card-grid">
+            <div th:each="producto : ${productos}" class="product-card tienda-product-card">
+                <img th:src="@{${producto.img}}" alt="Imagen" class="product-img tienda-product-img"/>
+                <div class="product-info tienda-product-info">
+                    <h3 th:text="${producto.nombreArticulo}" class="tienda-product-name"></h3>
+                    <p th:text="${producto.precio} + ' $'" class="tienda-product-price"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer th:replace="~{common/private_navigation :: footer}" />
+</body>
+</html>
