@@ -22,15 +22,15 @@ public class PerfilController {
     @GetMapping("/listado")
     public String mostrarListadoPerfil(Model model) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        String username = auth.getName(); // obtener el nombre del usuario logueado
+        String username = auth.getName();
     
         Usuario usuario = usuarioService.getUsuarioPorUsername(username);
     
         if (usuario != null) {
             model.addAttribute("usuario", usuario);
-            return "private/perfil/listado"; // la vista que mostraste
+            return "private/perfil/listado"; 
         } else {
-            return "redirect:/login?error"; // en caso de error
+            return "redirect:/login?error"; 
         }
     }
  
@@ -53,4 +53,8 @@ public class PerfilController {
         usuarioService.save(usuario);
         return "redirect:/perfil/listado";
     }
+
+
+
+
 }
