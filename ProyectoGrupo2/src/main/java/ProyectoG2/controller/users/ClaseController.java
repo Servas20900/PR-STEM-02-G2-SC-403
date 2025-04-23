@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.security.Principal;
+import java.util.List;
 import java.util.Optional;
 
 @RequestMapping("/clases")
@@ -56,5 +57,19 @@ public class ClaseController {
         }
 
         return "redirect:/clases";
+    }
+
+    @GetMapping("/mis-clases")
+    public String verMisClases(Model model) {
+        // Obtener usuario autenticado
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        String username = auth.getName();
+        Usuario usuario = usuarioService.getUsuarioPorUsername(username);
+
+        // Obtener clases inscritas por el usuario
+        List<Clase> clases = inscripcionService.findClasesByUsuario(usuario);
+        model.addAttribute("clases", clases);
+
+        return "private/clases/mis_clases"; // nombre del template .html
     }
 }

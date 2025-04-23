@@ -8,6 +8,8 @@ import ProyectoG2.service.InscripcionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class InscripcionServiceImpl implements InscripcionService {
     @Autowired
@@ -25,5 +27,10 @@ public class InscripcionServiceImpl implements InscripcionService {
         }
 
         return false;
+    }
+
+    @Override
+    public List<Clase> findClasesByUsuario(Usuario usuario) {
+        return inscripcionDao.findClasesByUsuario(usuario);
     }
 }

@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6"
+>
+
 <head th:fragment="head">
     <title>EBENEZER - Ajustes</title>
     <meta charset="UTF-8"/>
@@ -12,7 +14,7 @@
     <link rel="stylesheet" th:href="@{/css/styleServicios.css}"/>
     <link rel="stylesheet" th:href="@{/css/ajustesStyle.css}"/>
     <link rel="stylesheet" th:href="@{/css/pagoStyle.css}"/>
-    <link rel="stylesheet" th:href="@{/css/blogStyle.css}" />
+    <link rel="stylesheet" th:href="@{/css/blogStyle.css}"/>
     <link rel="stylesheet" th:href="@{/css/TiendaStyle.css}"/>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -34,6 +36,7 @@
                 <li><a th:href="@{/pago}">Pago</a></li>
                 <li><a th:href="@{/perfil/listado}">Perfil</a></li>
                 <li><a th:href="@{/ajustes}">Ajustes</a></li>
+                <li><a sec:authorize="hasRole('ADMIN')" th:href="@{/admin}">Panel de Administración</a></li>
             </ul>
         </div>
     </nav>

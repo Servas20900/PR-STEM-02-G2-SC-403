@@ -25,5 +25,4 @@ public class Tienda implements Serializable {
     private String marca;
     private String sexo;
     private String talla;
-    private String categoria;
 }

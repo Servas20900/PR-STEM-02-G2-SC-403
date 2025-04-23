@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Mis Clases</title>
+</head>
+<body>
+<h1>Mis Clases Inscritas</h1>
+
+<div th:if="${#lists.isEmpty(clases)}">
+    <p>No estás inscrito en ninguna clase.</p>
+</div>
+
+<div th:each="clase : ${clases}">
+    <article>
+        <h2 th:text="${clase.nombre_clase}"></h2>
+        <p>Instructor: <span th:text="${clase.instructor}"></span></p>
+        <p>Dificultad: <span th:text="${clase.dificultad}"></span></p>
+        <p>Tipo: <span th:text="${clase.tipo}"></span></p>
+        <p>Horario: <span th:text="${#temporals.format(clase.horario, 'dd/MM/yyyy HH:mm')}"></span></p>
+    </article>
+</div>
+</body>
+</html>

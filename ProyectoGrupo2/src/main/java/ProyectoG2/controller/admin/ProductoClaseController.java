@@ -1,7 +1,9 @@
 package ProyectoG2.controller.admin;
 
 
+import ProyectoG2.domain.Productos;
 import ProyectoG2.domain.Tienda;
+import ProyectoG2.service.ProductosService;
 import ProyectoG2.service.TiendaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,23 +23,26 @@ public class ProductoClaseController {
     @Autowired
     TiendaService tiendaService;
 
+    @Autowired
+    ProductosService productosService;
+
     @GetMapping("")
     public String getListaProductos(Model model) {
-        List<Tienda> productos = tiendaService.listarProductos();
+        List<Productos> productos = productosService.listarProductos();
 
         List<List<String>> items = new ArrayList<>();
 
-        for (Tienda producto : productos) {
+        for (Productos producto : productos) {
             List<String> item = new ArrayList<>();
-            item.add(Integer.toString(
-                    producto.getId_articulo().intValue()
+            item.add(Long.toString(
+                    producto.getId_articulo()
             ));
-            item.add(producto.getNombre_articulo());
+            item.add(producto.getNombreArticulo());
             item.add(Double.toString(
                     producto.getPrecio()
             ));
             item.add(producto.getMarca());
-            item.add(producto.getCategoria());
+            item.add(producto.getSexo());
             items.add(item);
         }
 
