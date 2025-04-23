@@ -1,16 +1,9 @@
 .contenedor-ajustes {
     width: 80%;
     margin: 40px auto;
-    color: #fff;
-    background-color: #0f1a2b;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.Ajustes {
-    display: flex;
-    font-size: 18px;
-    margin: 5px;
+    color: #0f1a2b;
+    background-color: transparent;
+    padding: 0;
 }
 
 .seccion-ajustes {
@@ -23,6 +16,7 @@
     background-color: #fff;
     padding: 15px;
     border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
 }
 
 .menu-ajustes ul {
@@ -38,6 +32,7 @@
     color: #0f1a2b;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .menu-ajustes a.activo {
@@ -46,11 +41,11 @@
 
 .contenido-ajustes {
     flex-grow: 1;
-    justify-content: center;
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     color: #0f1a2b;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .encabezado-ajustes {
@@ -84,11 +79,18 @@
 .politica-ajustes {
     text-align: center;
     font-size: 14px;
+    color: #0f1a2b;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .politica-ajustes a {
     color: #4dabf7;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .boton-cerrar-sesion {
@@ -101,6 +103,7 @@
     margin: 20px auto;
     cursor: pointer;
     font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 .boton-cerrar-sesion:hover {

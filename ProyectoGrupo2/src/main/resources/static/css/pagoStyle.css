@@ -1,35 +1,47 @@
 .container-pago {
     width: 50%;
     margin: 40px auto;
-    color: #fff;
-    background-color: #0f1a2b;
-    padding: 30px;
+    color: #0f1a2b;
+    background-color: transparent; 
+    padding: 0;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
+
 .metodo-pago img {
     width: 100%;
     max-width: 300px;
     margin: 10px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px;
 }
-.pago-form {
 
+.pago-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
     align-items: center;
     background-color: white;
-    padding: auto;
+    padding: 30px;
     border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+    margin-top: 20px;
 }
+
 .pago-form > input {
     width: 90%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 10px 5px;
+    border: none;
+    border-bottom: 2px solid #ccc;
     font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
 }
+
+.pago-form > input:focus {
+    border-bottom: 2px solid #4dabf7;
+}
+
 .btn-pago {
     background-color: #4dabf7;
     color: white;
@@ -40,13 +52,23 @@
     cursor: pointer;
     font-size: 18px;
     font-weight: bold;
+    transition: background-color 0.3s;
 }
+
 .btn-pago:hover {
     background-color: #369ce8;
 }
+
 .info-pago {
     font-size: 12px;
-    color: #ccc;
-    margin-top: 15px;
+    color: #0f1a2b;
+    margin-top: 20px;
     text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
