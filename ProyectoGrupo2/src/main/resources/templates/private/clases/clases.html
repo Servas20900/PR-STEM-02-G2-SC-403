@@ -17,6 +17,7 @@
 
 
     <h1>Clases</h1>
+    <a th:href="@{/clases/mis-clases}" class="btn secondary-btn">Mis clases</a>
     <section class="clases-filtros">
         <div class="clases-filtros-filtro">
             <input type="search" name="" id="" placeholder="Buscar">
@@ -53,7 +54,7 @@
                 <p><span>Instructor: </span><span th:text="${clase.instructor}"></span></p>
                 <p><span>Dificultad: </span><span th:text="${clase.dificultad}"></span></p>
                 <p><span>Tipo: </span><span th:text="${clase.tipo}"></span></p>
-                <p><span>Horario: </span><span th:text="${clase.horario}"></span></p>
+                <p><span>Horario: </span><span th:text="${#temporals.format(clase.horario, 'dd/MM/yyyy HH:mm')}"></span></p>
             </div>
             <div class="clase-card--btns">
                 <form th:action="@{/clases/inscribir/{id}(id=${clase.idClase})}" method="post">

@@ -1,23 +1,35 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title>Mis Clases</title>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/199/xhtml">
+<head th:replace="~{common/public_navigation :: head}">
+    <title>EBENEZER</title>
 </head>
 <body>
-<h1>Mis Clases Inscritas</h1>
+<header th:replace="~{common/private_navigation :: header}"/>
 
-<div th:if="${#lists.isEmpty(clases)}">
-    <p>No estás inscrito en ninguna clase.</p>
-</div>
+<main class="container">
+    <div th:if="${mensajeExito}" class="alerta alerta-succes">
+        <span th:text="${mensajeExito}"></span>
+    </div>
 
-<div th:each="clase : ${clases}">
-    <article>
-        <h2 th:text="${clase.nombre_clase}"></h2>
-        <p>Instructor: <span th:text="${clase.instructor}"></span></p>
-        <p>Dificultad: <span th:text="${clase.dificultad}"></span></p>
-        <p>Tipo: <span th:text="${clase.tipo}"></span></p>
-        <p>Horario: <span th:text="${#temporals.format(clase.horario, 'dd/MM/yyyy HH:mm')}"></span></p>
-    </article>
-</div>
+    <div th:if="${mensajeError}" class="alerta alerta-warning" role="alert">
+        <span th:text="${mensajeError}"></span>
+    </div>
+
+
+    <h1>Mis clases</h1>
+    <div style="display: flex; flex-wrap: wrap; gap: 40px">
+        <div th:each="clase : ${clases}" class="clase-card">
+            <article>
+                <h2 th:text="${clase.nombre_clase}"></h2>
+                <p>Instructor: <span th:text="${clase.instructor}"></span></p>
+                <p>Dificultad: <span th:text="${clase.dificultad}"></span></p>
+                <p>Tipo: <span th:text="${clase.tipo}"></span></p>
+                <p>Horario: <span th:text="${#temporals.format(clase.horario, 'dd/MM/yyyy HH:mm')}"></span></p>
+            </article>
+        </div>
+    </div>
+</main>
+
+<footer th:replace="~{common/private_navigation :: footer}"/>
 </body>
 </html>
