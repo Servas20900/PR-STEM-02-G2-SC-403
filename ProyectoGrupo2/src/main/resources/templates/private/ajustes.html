@@ -10,16 +10,9 @@
 
     <div class="contenedor-ajustes">
         <div class="Ajustes">
-            <h1>Ajustes</h1>
         </div>
         <div class="seccion-ajustes">
-            <div class="menu-ajustes">
-                <ul>
-                    <li><a th:href="@{/templates/private/perfil/listado}">Perfil</a></li>
-                    <li><a th:href="@{/ajustes}" class="activo">General</a></li>
-                    <li><a th:href="@{/pago}">Pago</a></li>
-                </ul>
-            </div>
+            <aside th:replace="~{/common/aside_settings :: aside-panel}"></aside>
             <div class="contenido-ajustes">
                 <div class="encabezado-ajustes">
                     <h2>General</h2>

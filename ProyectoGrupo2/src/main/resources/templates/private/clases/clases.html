@@ -37,7 +37,7 @@
                 <h3 th:text="${clase.nombre_clase}"></h3>
                 <div>
                     <i class="fa-solid fa-users fa-lg"></i>
-                    <span>20/20</span>
+                    <span th:text="${clase.usuarios_registrados} + '/' +  ${clase.capacidad_maxima}"></span>
                 </div>
             </div>
             <div class="clase-card--content">

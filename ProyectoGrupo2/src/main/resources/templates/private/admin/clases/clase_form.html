@@ -30,6 +30,11 @@
         </div>
 
         <div>
+            <label for="titulo">Capacidad máxima</label>
+            <input type="text" id="titulo" th:field="*{capacidad_maxima}" required/>
+        </div>
+
+        <div>
             <label for="horario">Horario</label>
             <input type="datetime-local" id="horario" name="horario" th:field="*{horario}" required>
         </div>

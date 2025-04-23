@@ -8,37 +8,41 @@
 <body>
     <header th:replace="~{common/private_navigation :: header}" />
 
-    <div class="container-pago">
-        <h2>Ingresá un método de pago</h2>
-        <div class="metodo-pago">
-            <img th:src="@{/img/metodoDePago.png}" alt="tipos">
+    <div class="container" style="display: flex;align-items:center;">
+        <aside th:replace="~{/common/aside_settings :: aside-panel}"></aside>
+        <div class="container-pago">
+            <h2>Ingresá un método de pago</h2>
+            <div class="metodo-pago">
+                <img th:src="@{/img/metodoDePago.png}" alt="tipos">
+            </div>
+
+            <form class="pago-form">
+
+                <input type="text" name="nombre" placeholder="Nombre" required pattern="[A-Za-z\s]+"
+                       title="Solo letras y espacios">
+
+                <!-- Número de tarjeta: exactamente 16 dígitos -->
+                <input type="text" name="tarjeta" placeholder="Número de tarjeta" required pattern="\d{16}"
+                       title="Debe tener exactamente 16 dígitos numéricos">
+
+                <!-- Fecha de vencimiento: formato MM/YY -->
+                <input type="text" name="vencimiento" placeholder="Fecha de vencimiento (MM/YY)" required
+                       pattern="(0[1-9]|1[0-2])/\d{2}" title="Formato válido: MM/YY, por ejemplo 08/26">
+
+                <!-- CCV: 3 dígitos -->
+                <input type="text" name="ccv" placeholder="CCV" required pattern="\d{3}" title="Debe tener 3 dígitos">
+
+                <button type="submit" class="btn-pago">Agregar</button>
+            </form>
+
+            <p class="info-pago">
+                Puedes usar varias formas de pago con tu cuenta. Obtén detalles<br>
+                Autorizas a EBENEZER a realizar cobros a esta forma de pago predeterminada para
+                las transacciones pagadas, y si hay un problema, tus siguientes formas de pago
+                elegibles. Obtén detalles
+            </p>
         </div>
 
-        <form class="pago-form">
-            
-            <input type="text" name="nombre" placeholder="Nombre" required pattern="[A-Za-z\s]+"
-                title="Solo letras y espacios">
-
-            <!-- Número de tarjeta: exactamente 16 dígitos -->
-            <input type="text" name="tarjeta" placeholder="Número de tarjeta" required pattern="\d{16}"
-                title="Debe tener exactamente 16 dígitos numéricos">
-
-            <!-- Fecha de vencimiento: formato MM/YY -->
-            <input type="text" name="vencimiento" placeholder="Fecha de vencimiento (MM/YY)" required
-                pattern="(0[1-9]|1[0-2])/\d{2}" title="Formato válido: MM/YY, por ejemplo 08/26">
-
-            <!-- CCV: 3 dígitos -->
-            <input type="text" name="ccv" placeholder="CCV" required pattern="\d{3}" title="Debe tener 3 dígitos">
-
-            <button type="submit" class="btn-pago">Agregar</button>
-        </form>
-
-        <p class="info-pago">
-            Puedes usar varias formas de pago con tu cuenta. Obtén detalles<br>
-            Autorizas a EBENEZER a realizar cobros a esta forma de pago predeterminada para
-            las transacciones pagadas, y si hay un problema, tus siguientes formas de pago
-            elegibles. Obtén detalles
-        </p>
     </div>
 
     <footer th:replace="~{common/private_navigation :: footer}" />
