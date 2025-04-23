@@ -15,15 +15,12 @@ public class PromocionesController {
 
     @Autowired
     private PromocionesService promocionesService;
-    
-    @GetMapping("/listadoPromociones")
+
+    @GetMapping("/listado")
     public String listarPromociones(Model model) {
         List<Promociones> promociones = promocionesService.getPromociones();
-        model.addAttribute("promocioness", promociones); 
-        model.addAttribute("totalPromociones", promociones.size()); 
-        return "public/listadoPromociones"; 
+        model.addAttribute("promocioness", promociones);
+        model.addAttribute("totalPromociones", promociones.size());
+        return "public/promocionesF/listado";
     }
 }
-
-
-
