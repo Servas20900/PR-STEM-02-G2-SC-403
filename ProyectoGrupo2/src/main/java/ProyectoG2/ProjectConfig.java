@@ -21,27 +21,23 @@ public class ProjectConfig {
         this.userDetailsService = userDetailsService;
     }
 
-    // Password encoder para encriptar/validar contraseñas
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
-    // Authentication manager que usará el UserDetailsService
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration authConfig) throws Exception {
         return authConfig.getAuthenticationManager();
     }
 
-    // Configuración de seguridad HTTP
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
             .authorizeHttpRequests(authorize -> authorize
-                .requestMatchers("/", "/login", "/contacto", "/promociones", "/registro", "/sede", "/css/**", "/js/**", "/img/**").permitAll()
+                .requestMatchers("/", "/login","/contacto", "/promociones", "/registro", "/sede", "/css/**", "/js/**", "/img/**").permitAll()
                 .anyRequest().authenticated()
             )
-            // Form login predeterminado
             .formLogin(form -> form
                 .loginPage("/login") 
                 .defaultSuccessUrl("/home", true) 

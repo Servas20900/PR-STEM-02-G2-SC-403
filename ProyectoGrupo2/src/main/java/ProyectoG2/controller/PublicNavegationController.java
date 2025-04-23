@@ -16,6 +16,7 @@ public class PublicNavegationController {
         return "public/sede"; 
     }
 
+
     @GetMapping("/promociones") 
     public String mostrarPromociones() {
         return "public/promociones"; 
@@ -30,7 +31,6 @@ public class PublicNavegationController {
     public String mostrarPago() {
         return "private/pago";
     }
-
 
 
 

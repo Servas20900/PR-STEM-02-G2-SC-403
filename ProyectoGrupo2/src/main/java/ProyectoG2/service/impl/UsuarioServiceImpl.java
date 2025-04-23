@@ -2,7 +2,10 @@ package ProyectoG2.service.impl;
 
 
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import ProyectoG2.dao.UsuarioDao;
@@ -15,6 +18,8 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     @Autowired
     private UsuarioDao usuarioDao;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     @Override
     public List<Usuario> getUsuarios() {
@@ -43,7 +48,21 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     @Override
     public void save(Usuario usuario) {
-        // En esta implementación básica ignoramos el parámetro crearRolUser
+        // ver si el usuario ya existe en la base de datos antes de decidir si debemos encriptar la contraseña o no
+        Optional<Usuario> usuarioExistente = usuarioDao.findById(usuario.getIdUsuario());
+
+        if (usuarioExistente.isPresent()) {
+            Usuario existente = usuarioExistente.get();
+
+            // Solo encriptar si la contraseña fue modificada y no ya está encriptada
+            if (!usuario.getPassword().equals(existente.getPassword()) && !usuario.getPassword().startsWith("$2a$")) {
+                usuario.setPassword(passwordEncoder.encode(usuario.getPassword()));
+            }
+        } else {
+            // Nuevo usuario: encriptar siempre
+            usuario.setPassword(passwordEncoder.encode(usuario.getPassword()));
+        }
+
         usuarioDao.save(usuario);
     }
 
@@ -52,14 +71,6 @@ public class UsuarioServiceImpl implements UsuarioService {
         usuarioDao.delete(usuario);
     }
 
-    // @Override
-    // public Usuario findByUsername(String username) {
-    //     return usuarioDao.findByUsername(username);
-    // }
 
-    // @Override
-    // public boolean existsByUsernameOrCorreo(String username, String correo) {
-    //     return usuarioDao.findByUsernameOrCorreo(username, correo) != null;
-    // }
 
 }
