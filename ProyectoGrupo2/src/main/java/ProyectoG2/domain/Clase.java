@@ -20,5 +20,7 @@ public class Clase implements Serializable {
     private String instructor;
     private String dificultad;
     private String tipo;
+    private int usuarios_registrados;
+    private int capacidad_maxima;
     private LocalDateTime horario;
 }

@@ -10,15 +10,7 @@
 
     <main class="settings-container">
         <div class="settings-content">
-            <aside class="settings-menu">
-                <ul>
-                    <h1 class="settings-title">Ajustes</h1>
-                    <li><a th:href="@{/perfil/listado}" class="active">Perfil</a></li>
-                    <li><a th:href="@{/ajustes}" class="active">General</a></li>
-                    <li><a th:href="@{/pago}" class="active">Pago</a></li>
-                </ul>
-            </aside>
-
+            <aside th:replace="~{/common/aside_settings :: aside-panel}"></aside>
             <section class="settings-profile">
                 <div class="profile-card">
                     <i class="fa fa-user fa-4x user-icon"></i>
