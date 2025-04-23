@@ -12,4 +12,8 @@ public interface RolService {
     public void save(Rol rol);
 
     public void delete(Rol rol);
+
+    // List<Rol> findByIdUsuario(Long idUsuario);
+
+    // List<Rol> findByNombre(String nombre);
 }

@@ -6,24 +6,24 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class PublicNavegationController {
 
-    @GetMapping("/") // Página principal
+    @GetMapping("/") 
     public String mostrarIndex() {
-        return "public/index"; // Esto buscará index.html en templates/
+        return "public/index"; 
     }
 
-    @GetMapping("/sede") // Nueva ruta para vista.html
+    @GetMapping("/sede") 
     public String mostrarSede() {
-        return "public/sede"; // Esto buscará vista.html en templates/
+        return "public/sede"; 
     }
 
-    @GetMapping("/promociones") // Nueva ruta para vista.html
+    @GetMapping("/promociones") 
     public String mostrarPromociones() {
-        return "public/promociones"; // Esto buscará vista.html en templates/
+        return "public/promociones"; 
     }
 
-    @GetMapping("/contacto") // Nueva ruta para vista.html
+    @GetMapping("/contacto") 
     public String mostrarContacto() {
-        return "public/contacto"; // Esto buscará vista.html en templates/
+        return "public/contacto"; 
     }
 
     @GetMapping("/pago")
@@ -32,9 +32,6 @@ public class PublicNavegationController {
     }
 
 
-    @GetMapping("/singup")
-    public String mostrarSingup() {
-        return "public/singup";
-    };
-    
+
+
 }

@@ -159,19 +159,24 @@ INSERT INTO rol (id_rol, nombre, id_usuario) VALUES
 (6, 'ROLE_USER', 3);
 -- Rutas protegidas
 INSERT INTO ruta (patron, rol_name) VALUES
-('/carrito/agregar/**', 'USER'),
-('/carrito/listado', 'USER'),
-('/carrito/eliminar/**', 'USER'),
-('/carrito/modificar/**', 'USER'),
-('/carrito/guardar', 'USER'),
-('/facturar/carrito', 'USER');
+('/public/**', 'USER'),
+('/public/**', 'ADMIN'),
+('/private/**', 'ADMIN'),
+('/private/blog/**', 'USER'),
+('/private/clases/**', 'USER'),
+('/private/perfil/**', 'USER'),
+('/private/ServiciosAd/**', 'USER'),
+('/private/ajustes/**', 'USER'),
+('/private/home/**', 'USER'),
+('/private/pago/**', 'USER'),
+
 
 -- Rutas públicas
 INSERT INTO ruta_permit (patron) VALUES 
 ('/'),
 ('/index'),
 ('/errores/'),
-('/carrito/'),
+('/public/**'),
 ('/registro/'),
 ('/js/'),
 ('/webjars/');
