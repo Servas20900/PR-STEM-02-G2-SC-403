@@ -4,7 +4,7 @@
     <title>EBENEZER</title>
 </head>
 <body>
-<header th:replace="~{common/admin_navigation :: header}" />
+<header th:replace="~{common/admin_navigation :: header}"/>
 
 <main class="container">
     <h1>Dashboard de administrador</h1>
@@ -22,28 +22,31 @@
             <article class="admin-modules-module">
                 <h3>Productos</h3>
                 <div class="admin-module-actions">
-                    <a class="btn standard-btn-black"><i class="fa-solid fa-plus fa-lg" style="color: #4cc85f;"></i></a>
-                    <a class="btn standard-btn-black"  th:href="@{admin/productos}"><i class="fa-solid fa-list fa-lg"></i></a>
+                    <a class="btn standard-btn-black" th:href="@{admin/productos/nuevo}"><i class="fa-solid fa-plus fa-lg" style="color: #4cc85f;"></i></a>
+                    <a class="btn standard-btn-black" th:href="@{admin/productos}"><i
+                            class="fa-solid fa-list fa-lg"></i></a>
                 </div>
             </article>
             <article class="admin-modules-module">
                 <h3>Clases</h3>
                 <div class="admin-module-actions">
-                    <a class="btn standard-btn-black"><i class="fa-solid fa-plus fa-lg" style="color: #4cc85f;"></i></a>
-                    <a class="btn standard-btn-black"  th:href="@{admin/clases}"><i class="fa-solid fa-list fa-lg"></i></a>
+                    <a class="btn standard-btn-black" th:href="@{admin/clases/nueva}"><i class="fa-solid fa-plus fa-lg" style="color: #4cc85f;"></i></a>
+                    <a class="btn standard-btn-black" th:href="@{admin/clases}"><i
+                            class="fa-solid fa-list fa-lg"></i></a>
                 </div>
             </article>
             <article class="admin-modules-module">
                 <h3>Blogs</h3>
                 <div class="admin-module-actions">
-                    <a class="btn standard-btn-black"><i class="fa-solid fa-plus fa-lg" style="color: #4cc85f;"></i></a>
-                    <a class="btn standard-btn-black"  th:href="@{admin/blogs}"><i class="fa-solid fa-list fa-lg"></i></a>
+                    <a class="btn standard-btn-black" th:href="@{admin/blogs/nuevo}"><i class="fa-solid fa-plus fa-lg" style="color: #4cc85f;"></i></a>
+                    <a class="btn standard-btn-black" th:href="@{admin/blogs}"><i
+                            class="fa-solid fa-list fa-lg"></i></a>
                 </div>
             </article>
         </section>
     </section>
 </main>
 
-<footer th:replace="~{common/admin_navigation :: footer}" />
+<footer th:replace="~{common/admin_navigation :: footer}"/>
 </body>
 </html>
