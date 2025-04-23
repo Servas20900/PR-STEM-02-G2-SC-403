@@ -36,7 +36,7 @@ public class RegistroController {
     @PostMapping("/registro")
     public String procesarRegistro(@ModelAttribute Usuario usuario) {
         usuario.setPassword(passwordEncoder.encode(usuario.getPassword()));
-    
+
         Rol rolUser = rolService.getRoles().stream()
             .filter(r -> r.getNombre().equals("ROLE_USER"))
             .findFirst()
@@ -46,12 +46,14 @@ public class RegistroController {
                 rolService.save(nuevo);
                 return nuevo;
             });
-    
+
         usuario.setRoles(Collections.singletonList(rolUser));
-        
+
+
+        System.out.println(usuario);
         usuarioService.save(usuario);
-    
+
         return "redirect:/login";
     }
-    
+
 }

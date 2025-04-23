@@ -16,4 +16,6 @@ public interface ClaseService {
     public void delete(Clase clase);
 
     public void deleteById(int id);
+
+    public void actualizarInscripcion(int idClase);
 }

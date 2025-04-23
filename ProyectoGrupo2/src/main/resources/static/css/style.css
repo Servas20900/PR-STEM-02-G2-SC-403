@@ -689,7 +689,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     font-weight: 600;
 }
 
+.alerta{
+    padding: 20px;
+    border-radius: 8px;
+    color: #fff;
+}
+.alerta-succes{
+    background-color: #469e54;
 
+}
+.alerta-warning{
+    background-color: #e1c42b;
+}
 footer {
     display: flex;
     justify-content: center;
