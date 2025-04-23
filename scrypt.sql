@@ -100,7 +100,6 @@ CREATE TABLE usuario (
   nombre VARCHAR(20) NOT NULL,
   apellidos VARCHAR(30) NOT NULL,
   correo VARCHAR(75),
-  telefono VARCHAR(15),
   PRIMARY KEY (id_usuario)
 ) ENGINE = InnoDB DEFAULT CHARACTER SET = utf8mb4;
 
@@ -141,10 +140,10 @@ CREATE TABLE constante (
 
 
 -- Usuarios
-INSERT INTO usuario (id_usuario, username, password, nombre, apellidos, correo, telefono) VALUES 
-(1, 'sebastian123', '$2a$10$P1.w58XvnaYQUQgZUCk4aO/RTRl8EValluCqB3S2VMLTbRt.tlre.', 'Sebastián', 'Mendez Artavia', 'seb.vargas@gmail.com', '6001-2234'),
-(2, 'fio', '$2a$10$GkEj.ZzmQa/aEfDmtLIh3udIH5fMphx/35d0EYeqZL5uzgCJ0lQRi', 'Fiorella', 'Jaen Artavia', 'fiorella.rj@hotmail.com', '7223-8855'),
-(3, 'magnusx', '$2a$10$koGR7eS22Pv5KdaVJKDcge04ZB53iMiw76.UjHPY.XyVYlYqXnPbO', 'Magnus', 'Mendez Artavia', 'magnus.alvarado@gmail.com', '6044-9191');
+INSERT INTO usuario (id_usuario, username, password, nombre, apellidos, correo) VALUES 
+(1, 'sebastian123', '$2a$10$P1.w58XvnaYQUQgZUCk4aO/RTRl8EValluCqB3S2VMLTbRt.tlre.', 'Sebastián', 'Mendez Artavia', 'seb.vargas@gmail.com'),
+(2, 'fio', '$2a$10$GkEj.ZzmQa/aEfDmtLIh3udIH5fMphx/35d0EYeqZL5uzgCJ0lQRi', 'Fiorella', 'Jaen Artavia', 'fiorella.rj@hotmail.com'),
+(3, 'magnusx', '$2a$10$koGR7eS22Pv5KdaVJKDcge04ZB53iMiw76.UjHPY.XyVYlYqXnPbO', 'Magnus', 'Mendez Artavia', 'magnus.alvarado@gmail.com');
 
 -- Roles base
 INSERT INTO role (rol) VALUES ('ADMIN'), ('VENDEDOR'), ('USER');
