@@ -50,7 +50,7 @@ public class PerfilController {
 
     @PostMapping("/guardar")
     public String guardarUsuario(@ModelAttribute Usuario usuario) {
-        usuarioService.save(usuario);
+        usuarioService.save1(usuario);
         return "redirect:/perfil/listado";
     }
 

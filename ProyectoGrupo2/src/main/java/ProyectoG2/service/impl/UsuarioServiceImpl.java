@@ -45,9 +45,13 @@ public class UsuarioServiceImpl implements UsuarioService {
     public Usuario getUsuarioPorUsernameOCorreo(String username, String correo) {
         return usuarioDao.findByUsernameOrCorreo(username, correo);
     }
-
     @Override
     public void save(Usuario usuario) {
+        usuarioDao.save(usuario);
+    }
+
+    @Override
+    public void save1(Usuario usuario) {
         // ver si el usuario ya existe en la base de datos antes de decidir si debemos encriptar la contraseña o no
         Optional<Usuario> usuarioExistente = usuarioDao.findById(usuario.getIdUsuario());
 

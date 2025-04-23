@@ -41,9 +41,9 @@ CREATE TABLE Productos (
     id_articulo INT AUTO_INCREMENT PRIMARY KEY,
     nombre_articulo VARCHAR(255) NOT NULL,
     descripcion TEXT NOT NULL,
-    img VARCHAR(255), -- Ruta de la imagen
-	precio DECIMAL(10, 2) NOT NULL,
-	marca VARCHAR(50) NOT NULL,
+    img VARCHAR(255), 
+	  precio DECIMAL(10, 2) NOT NULL,
+	  marca VARCHAR(50) NOT NULL,
     sexo VARCHAR(20) NOT NULL,
     talla VARCHAR(5),
     categoria VARCHAR(55) NOT NULL
@@ -124,6 +124,11 @@ INSERT INTO usuario (id_usuario, username, password, nombre, apellidos, correo) 
 (1, 'sebastian123', '$2a$10$P1.w58XvnaYQUQgZUCk4aO/RTRl8EValluCqB3S2VMLTbRt.tlre.', 'Sebastián', 'Mendez Artavia', 'seb.vargas@gmail.com'),
 (2, 'fio', '$2a$10$GkEj.ZzmQa/aEfDmtLIh3udIH5fMphx/35d0EYeqZL5uzgCJ0lQRi', 'Fiorella', 'Jaen Artavia', 'fiorella.rj@hotmail.com'),
 (3, 'magnusx', '$2a$10$koGR7eS22Pv5KdaVJKDcge04ZB53iMiw76.UjHPY.XyVYlYqXnPbO', 'Magnus', 'Mendez Artavia', 'magnus.alvarado@gmail.com');
+
+
+-- productos
+
+
 
 -- Roles base
 INSERT INTO role (rol) VALUES ('ADMIN'), ('VENDEDOR'), ('USER');

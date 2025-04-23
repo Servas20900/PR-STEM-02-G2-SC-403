@@ -18,8 +18,9 @@ public interface UsuarioService {
 
   
     
-
     public void save(Usuario usuario);
+
+    public void save1(Usuario usuario);
 
     public void delete(Usuario usuario);
 
