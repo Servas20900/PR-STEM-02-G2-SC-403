@@ -1,16 +1,6 @@
 -- Crear base de datos
 CREATE DATABASE Proyecto;
 
-
--- Crear usuario 'usuario_proyecto' si no existe
-CREATE USER IF NOT EXISTS 'usuario_proyecto'@'localhost' IDENTIFIED BY 'la_Clave.';
-
--- Otorgar permisos completos sobre la base de datos Proyecto
-GRANT ALL PRIVILEGES ON Proyecto.* TO 'usuario_proyecto'@'localhost';
-
--- Asegurar que los privilegios sean aplicados
-FLUSH PRIVILEGES;
-
 -- Usar la base de datos
 USE Proyecto;
 
