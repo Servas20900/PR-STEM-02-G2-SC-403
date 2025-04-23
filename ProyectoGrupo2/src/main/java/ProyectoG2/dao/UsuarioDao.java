@@ -15,4 +15,5 @@ public interface UsuarioDao extends JpaRepository<Usuario, Long> {
     // Buscar si ya existe un usuario por username o correo (útil al registrar)
     Usuario findByUsernameOrCorreo(String username, String correo);
 
+    
 }

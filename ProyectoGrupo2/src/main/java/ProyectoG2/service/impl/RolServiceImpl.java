@@ -37,4 +37,15 @@ public class RolServiceImpl implements RolService {
     public void delete(Rol rol) {
         rolDao.delete(rol);
     }
+
+    // @Override
+    // public List<Rol> findByIdUsuario(Long idUsuario) {
+    //     return rolDao.findByIdUsuario(idUsuario);
+    // }
+
+    // @Override
+    // public List<Rol> findByNombre(String nombre) {
+    //     return rolDao.findByNombre(nombre);
+    // }
+
 }
