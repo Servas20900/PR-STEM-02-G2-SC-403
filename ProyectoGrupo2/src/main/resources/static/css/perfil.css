@@ -1,10 +1,9 @@
 .settings-container {
     width: 80%;
     margin: 40px auto;
-    color: #fff;
-    background-color: #0f1a2b;
     padding: 20px;
     border-radius: 10px;
+    /* fondo eliminado para dejar solo las cartas */
 }
 
 .settings-title {
@@ -12,6 +11,7 @@
     font-weight: bold;
     text-align: left;
     padding-left: 20px;
+    color: #0f1a2b;
 }
 
 .settings-content {
@@ -24,6 +24,7 @@
     background-color: #fff;
     padding: 15px;
     border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* flotante */
 }
 
 .settings-menu ul {
@@ -57,13 +58,13 @@
     border-radius: 10px;
     text-align: center;
     width: 350px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* efecto flotante */
 }
 
-.profile-picture {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 3px solid #4dabf7;
+.user-icon {
+    color: #0f1a2b;
+    margin-bottom: 15px;
+    
 }
 
 .profile-card h2 {

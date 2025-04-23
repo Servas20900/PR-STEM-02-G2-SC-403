@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns="http://www.w3.org/199/xhtml">
-    <head th:replace="~{common/private_navigation :: head}">
-        <link th:href="@{/css/indexStyles.css}" rel="stylesheet"/> 
-        <title>EBENEZER</title>
-    </head>
-    <body>
-        <header th:replace="~{common/private_navigation :: header}"/>
-                    
-            <main class="settings-container">
-                <h1 class="settings-title">Ajustes</h1>
-                <div class="settings-content">
-                    <!-- Menú lateral -->
-                    <aside class="settings-menu">
-                        <ul>
-                            <li><a th:href="@{/templates/private/perfil/listado}" class="active">Perfil</a></li>
-                            <li><a th:href="@{/ajustes}" class="active">General</a></li>
-                            <li><a th:href="@{/pago}" class="active">Pago</a></li>
-                        </ul>
-                    </aside>
+<head th:replace="~{common/private_navigation :: head}">
+    <link th:href="@{/css/indexStyles.css}" rel="stylesheet"/> 
+    <title>EBENEZER</title>
+</head>
+<body>
+    <header th:replace="~{common/private_navigation :: header}"/>
 
-                    <!-- Información del usuario -->
-                    <section class="settings-profile">
+    <main class="settings-container">
+        <div class="settings-content">
+            <!-- Menú lateral -->
+            <aside class="settings-menu">
+                <ul>
+                    <h1 class="settings-title">Ajustes</h1>
+                    <li><a th:href="@{/perfil/listado}" class="active">Perfil</a></li>
+                    <li><a th:href="@{/ajustes}" class="active">General</a></li>
+                    <li><a th:href="@{/pago}" class="active">Pago</a></li>
+                </ul>
+            </aside>
+
+            <!-- Información del usuario -->
+            <section class="settings-profile">
+                <div class="profile-card">
+                    <i class="fa fa-user fa-4x user-icon"></i>
+                    <p th:if="${usuario != null}" th:text="${usuario.username}">Username</p>
+
+                    <p th:text="${usuario.correo}">Correo</p>
+                    <div class="profile-details">
                         <div class="profile-card">
-                            <img src="/img/batifoto.png" alt="Foto de perfil" class="profile-picture"/>
-                            <h2 style="color: black;" >Nombre del usuario</h2>
-                            <p >email@ejemplo.com</p>
-                            <div class="profile-details">
-                                <p><strong>fecha de nacimiento:</strong> <span >19/02/1972</span></p>
-                                <p><strong>Vencimiento:</strong> <span >30 días</span></p>
-                                <p><strong>Plan:</strong> <span >Premium</span></p>
-                            </div>
-                            <a class="edit-button">Editar</a>
+                            <p th:text="${usuario.nombre}">Nombre</p>
                         </div>
-                    </section>
+                    </div>
+                    <!-- Botón de edición que redirige al formulario con el ID del usuario -->
+                    <a class="edit-button" th:href="@{'/perfil/editar/' + ${usuario.idUsuario}}">Editar</a>
                 </div>
-            </main>
+            </section>
+        </div>
+    </main>
 
-
-        <footer th:replace="~{common/private_navigation :: footer}"/>
-    </body>
+    <footer th:replace="~{common/private_navigation :: footer}"/>
+</body>
 </html>
