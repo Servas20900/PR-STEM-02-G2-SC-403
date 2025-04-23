@@ -41,4 +41,13 @@ public class ClaseServiceImpl implements ClaseService {
 
     @Override
     public void deleteById(int id) {claseDao.deleteById(id);}
+
+    @Override
+    public void actualizarInscripcion(int idClase) {
+        getClaseById(idClase).ifPresent(clase -> {
+            clase.setUsuarios_registrados(clase.getUsuarios_registrados()+1);
+
+            claseDao.save(clase);
+        });
+    }
 }

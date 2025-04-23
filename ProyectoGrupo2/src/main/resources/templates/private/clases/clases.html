@@ -33,7 +33,7 @@
     </section>
     <section class="clases">
         <article class="clase-card" th:each="clase : ${clases}">
-            <div class="clase-card--heading">
+            <div class="clase-card--heading" th:id="${clase.idClase}">
                 <h3 th:text="${clase.nombre_clase}"></h3>
                 <div>
                     <i class="fa-solid fa-users fa-lg"></i>
@@ -47,7 +47,9 @@
                 <p><span>Horario: </span><span th:text="${clase.horario}"></span></p>
             </div>
             <div class="clase-card--btns">
-                <a class="btn primary-btn">Reservar clase</a>
+                <form th:action="@{/clases/inscribir/{id}(id=${clase.idClase})}" method="post">
+                    <button class="btn primary-btn">Reservar clase</button>
+                </form>
             </div>
         </article>
 
