@@ -23,4 +23,10 @@ public interface UsuarioService {
     public void save(Usuario usuario);
     // Se elimina el usuario que tiene el id pasado por parámetro
     public void delete(Usuario usuario);
+
+
+    // //para auth
+    // Usuario findByUsername(String username);
+
+    // boolean existsByUsernameOrCorreo(String username, String correo);
 }
