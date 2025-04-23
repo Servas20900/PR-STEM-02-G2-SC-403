@@ -3,10 +3,6 @@ CREATE DATABASE Proyecto;
 -- Usar la base de datos
 USE Proyecto;
 
-
-
-
-
 -- Tabla Promociones
 CREATE TABLE Promociones (
     id_promocion INT AUTO_INCREMENT PRIMARY KEY,
@@ -29,29 +25,16 @@ CREATE TABLE Clases (
     instructor VARCHAR(125) NOT NULL,
     dificultad VARCHAR(35) NOT NULL,
     tipo VARCHAR(35) NOT NULL,
+    usuarios_registrados INT DEFAULT 0,
+    capacidad_maxima INT NOT NULL,
     horario DATETIME NOT NULL
 );
 
 -- Insertar clases
-INSERT INTO Clases (nombre_clase, instructor, dificultad, tipo, horario) VALUES
-('Yoga Avanzado', 'Ana Martinez', 'Avanzado', 'Presencial', '2024-07-30 08:00:00'),
-('Pilates Intermedio', 'Luis Fernandez', 'Intermedio', 'Online', '2024-08-01 10:00:00'),
-('Boxeo para principiantes', 'Pedro Gonzalez', 'Básico', 'Presencial', '2024-08-03 18:00:00');
-
-CREATE TABLE Asistencia_Clases(
-	id_asistencia INT AUTO_INCREMENT PRIMARY KEY,
-    id_clase INT NOT NULL,
-    capacidad_maxima INT NOT NULL,
-    usuarios_registrados INT NOT NULL,
-    FOREIGN KEY(id_clase) REFERENCES Clases(id_clase)
-);
-
-
--- Insertar asistencia a clases
-INSERT INTO Asistencia_Clases (id_clase, capacidad_maxima, usuarios_registrados) VALUES
-(1, 20, 10),
-(2, 15, 8),
-(3, 12, 5);
+INSERT INTO Clases (nombre_clase, instructor, dificultad, tipo,capacidad_maxima, horario) VALUES
+('Yoga Avanzado', 'Ana Martinez', 'Avanzado', 'Presencial',15, '2024-07-30 08:00:00'),
+('Pilates Intermedio', 'Luis Fernandez', 'Intermedio', 'Online', 20,'2024-08-01 10:00:00'),
+('Boxeo para principiantes', 'Pedro Gonzalez', 'Básico', 'Presencial', 10,'2024-08-03 18:00:00');
 
 -- Tabla Productos
 CREATE TABLE Productos (
@@ -137,9 +120,6 @@ CREATE TABLE constante (
   PRIMARY KEY (id_constante)
 ) ENGINE = InnoDB DEFAULT CHARACTER SET = utf8mb4;
 
-
-
-
 -- Usuarios
 INSERT INTO usuario (id_usuario, username, password, nombre, apellidos, correo, telefono) VALUES 
 (1, 'sebastian123', '$2a$10$P1.w58XvnaYQUQgZUCk4aO/RTRl8EValluCqB3S2VMLTbRt.tlre.', 'Sebastián', 'Mendez Artavia', 'seb.vargas@gmail.com', '6001-2234'),
@@ -168,7 +148,7 @@ INSERT INTO ruta (patron, rol_name) VALUES
 ('/private/ServiciosAd/**', 'USER'),
 ('/private/ajustes/**', 'USER'),
 ('/private/home/**', 'USER'),
-('/private/pago/**', 'USER'),
+('/private/pago/**', 'USER')
 
 
 -- Rutas públicas
@@ -192,5 +172,3 @@ INSERT INTO constante (atributo, valor) VALUES
 ('paypal.mode', 'sandbox'),
 ('urlPaypalCancel', 'http://localhost/payment/cancel'),
 ('urlPaypalSuccess', 'http://localhost/payment/success');
-
-select * from Clases
