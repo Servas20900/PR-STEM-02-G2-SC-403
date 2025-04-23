@@ -35,7 +35,7 @@ public class ProjectConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
             .authorizeHttpRequests(authorize -> authorize
-                .requestMatchers("/", "/login","/contacto", "/promociones", "/registro", "/sede", "/css/**", "/js/**", "/img/**").permitAll()
+                .requestMatchers("/", "/login","/contacto", "/promociones/listado", "/registro", "/sede", "/css/**", "/js/**", "/img/**").permitAll()
                 .anyRequest().authenticated()
             )
             .formLogin(form -> form
