@@ -9,6 +9,9 @@
 <main class="container">
     <h1 th:text="*{id} == null ? 'Nueva clase': 'Editando clase '+ ${clase.nombre_clase}"></h1>
     <form th:action="@{/admin/clases/guardar}" th:object="${clase}" method="post" class="admin-form">
+        <input type="hidden" th:field="*{idClase}" />
+
+
         <div>
             <label for="titulo">Nombre de clase</label>
             <input type="text" id="titulo" th:field="*{nombre_clase}" required/>
